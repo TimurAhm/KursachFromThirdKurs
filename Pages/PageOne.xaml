@@ -55,6 +55,6 @@
             </ListView.ItemTemplate>
         </ListView>
 
-        <Button Name="tbSearchUs" Grid.Row="2" Height="50" Content="Добавить" Margin="10"/>
+        <Button Name="tbSearchUs" Grid.Row="2" Height="30" Content="Добавить" Margin="10"/>
     </Grid>
 </Page>

@@ -23,11 +23,12 @@ namespace WpfExampleTimur343.Pages
     {
         private void UpdateData()
         {
-            LvTovars.ItemsSource = EfModel.Init().Tovars.Where(u => u.TovarName.Contains(tbSearchTovar.Text)).ToList();
+            LvTovars.ItemsSource = EfModel.Init().Tovars.Where(t => t.TovarName.Contains(tbSearchTovar.Text)).ToList();
         }
         public PageOne()
         {
             InitializeComponent();
+            LvTovars.ItemsSource = EfModel.Init().Tovars.ToList();
         }
     }
 }

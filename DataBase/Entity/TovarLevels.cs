@@ -6,7 +6,7 @@ namespace WpfExampleTimur343.DataBase
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("ISPr22-43_AhmadulinTI_EntityFramework_Kursovaya.TovarLevels")]
+    [Table("TovarLevels")]
     public partial class TovarLevels
     {
         [Key]
