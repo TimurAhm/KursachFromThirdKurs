@@ -1,0 +1,14 @@
+﻿<Application x:Class="WpfExampleTimur343.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:WpfExampleTimur343"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <Style x:Key="MenuBorderStyle" TargetType="Button">
+            <Setter Property="Background" Value="#FF212529" />
+            <Setter Property="Margin" Value="20"/>
+            <Setter Property="Foreground" Value="Aqua"/>
+        </Style>
+        <BitmapImage x:Key="Picture" UriSource="/Resources/picture.png" />
+    </Application.Resources>
+</Application>

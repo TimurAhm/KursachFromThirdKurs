@@ -1,0 +1,60 @@
+﻿<Page x:Class="WpfExampleTimur343.Pages.PageOne"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfExampleTimur343.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PageOne">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBox Name="tbSearchTovar" />
+        <ListView Grid.Row="1" Name="LvTovars" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Background="Aquamarine">
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel HorizontalAlignment="Center"/>
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Border BorderBrush="Black" BorderThickness="1">
+                        <!-- <Border.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FFF5EDF7" Offset="0.593"/>
+                                <GradientStop Color="#FFA635BF" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Border.Background>-->
+                        <Grid Height="200" Width="200">
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition Height="25"/>
+                                <RowDefinition Height="25"/>
+                                <RowDefinition Height="25"/>
+                            </Grid.RowDefinitions>
+                            <Image Source="{Binding TovarPicture, TargetNullValue={StaticResource Picture}}"/>
+                            <TextBlock Grid.Row="1" Text="{Binding TovarName}" HorizontalAlignment="Center"/>
+                            <!--"<TextBlock Grid.Row="2" Text="{Binding UserBalance, StringFormat='Баланс: {0} руб'}" HorizontalAlignment="Center" />-->
+                            <TextBlock Grid.Row="2" HorizontalAlignment="Center">
+                                <TextBlock.Text>
+                                    <MultiBinding StringFormat="{}{0} - {1} штук">
+                                        <Binding Path="TovarName"/>
+                                        <Binding Path="TovarCount"/>
+                                    </MultiBinding>
+                                </TextBlock.Text>
+                            </TextBlock>
+                            <Button Grid.Row="3" Content="Редактировать" />
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <Button Name="tbSearchUs" Grid.Row="2" Height="50" Content="Добавить" Margin="10"/>
+    </Grid>
+</Page>

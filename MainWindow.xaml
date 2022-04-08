@@ -1,0 +1,34 @@
+﻿<Window x:Class="WpfExampleTimur343.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfExampleTimur343"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Window.Background>
+        <RadialGradientBrush RadiusX="4">
+            <GradientStop Color="#FFD4DA53" Offset="1"/>
+            <GradientStop Color="Black"/>
+        </RadialGradientBrush>
+    </Window.Background>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        
+        
+        <StackPanel Grid.Column="1" Grid.Row="1" Orientation="Vertical">
+             <Button  Content="First list"  Margin="10" Click="PageOneClick"/>
+        </StackPanel>
+
+        <Frame Grid.Column="0" Grid.Row="1" Name="PageSwitcher" NavigationUIVisibility="Hidden"/>
+    </Grid>
+</Window>
