@@ -14,8 +14,14 @@
             <RowDefinition Height="8*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <TextBox Name="tbSearchTovar" />
-        <ListView Grid.Row="1" Name="LvTovars" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Background="Aquamarine">
+        <TextBox Name="tbSearchTovar" Height="45" VerticalAlignment="Top" TextChanged="tbSearchTovarChanged"/>
+        <ListView Grid.Row="1" Name="LvTovars" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+            <ListView.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Wheat"/>
+                    <GradientStop Color="#FFA650C5" Offset="1"/>
+                </LinearGradientBrush>
+            </ListView.Background>
             <ListView.ItemsPanel>
                 <ItemsPanelTemplate>
                     <WrapPanel HorizontalAlignment="Center"/>
@@ -30,7 +36,7 @@
                                 <GradientStop Color="#FFA635BF" Offset="1"/>
                             </LinearGradientBrush>
                         </Border.Background>-->
-                        <Grid Height="200" Width="200">
+                        <Grid Height="200" Width="200" Background="White">
                             <Grid.RowDefinitions>
                                 <RowDefinition/>
                                 <RowDefinition Height="25"/>
@@ -39,6 +45,7 @@
                             </Grid.RowDefinitions>
                             <Image Source="{Binding TovarPicture, TargetNullValue={StaticResource Picture}}"/>
                             <TextBlock Grid.Row="1" Text="{Binding TovarName}" HorizontalAlignment="Center"/>
+
                             <!--"<TextBlock Grid.Row="2" Text="{Binding UserBalance, StringFormat='Баланс: {0} руб'}" HorizontalAlignment="Center" />-->
                             <TextBlock Grid.Row="2" HorizontalAlignment="Center">
                                 <TextBlock.Text>
@@ -48,13 +55,13 @@
                                     </MultiBinding>
                                 </TextBlock.Text>
                             </TextBlock>
-                            <Button Grid.Row="3" Content="Редактировать" />
+                            <Button Grid.Row="3" Content="Редактировать" Click="btEditClick"/>
                         </Grid>
                     </Border>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
 
-        <Button Name="tbSearchUs" Grid.Row="2" Height="30" Content="Добавить" Margin="10"/>
+        <Button Name="tbAddTovar" Grid.Row="2" Height="30" Content="Добавить" Margin="10" Click="btAddTovarClick"/>
     </Grid>
 </Page>

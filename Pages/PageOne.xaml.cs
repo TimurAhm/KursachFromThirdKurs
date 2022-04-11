@@ -30,5 +30,21 @@ namespace WpfExampleTimur343.Pages
             InitializeComponent();
             LvTovars.ItemsSource = EfModel.Init().Tovars.ToList();
         }
+
+        private void btEditClick(object sender, RoutedEventArgs e)
+        {
+            Tovars tovars = (sender as Button).DataContext as Tovars;
+            NavigationService.Navigate(new TovarAddPage());
+        }
+
+        private void btAddTovarClick(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new TovarAddPage());
+        }
+
+        private void tbSearchTovarChanged(object sender, TextChangedEventArgs e)
+        {
+            UpdateData();
+        }
     }
 }

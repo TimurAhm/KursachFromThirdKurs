@@ -26,7 +26,7 @@
         
         
         <StackPanel Grid.Column="1" Grid.Row="1" Orientation="Vertical">
-             <Button  Content="First list"  Margin="10" Click="PageOneClick"/>
+             <Button  Content="Товары"  Margin="10" Click="PageOneClick"/>
         </StackPanel>
 
         <Frame Grid.Column="0" Grid.Row="1" Name="PageSwitcher" NavigationUIVisibility="Hidden"/>
