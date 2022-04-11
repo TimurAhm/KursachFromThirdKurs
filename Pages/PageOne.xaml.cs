@@ -34,12 +34,12 @@ namespace WpfExampleTimur343.Pages
         private void btEditClick(object sender, RoutedEventArgs e)
         {
             Tovars tovars = (sender as Button).DataContext as Tovars;
-            NavigationService.Navigate(new TovarAddPage());
+            NavigationService.Navigate(new TovarAddPage(tovars));
         }
 
         private void btAddTovarClick(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new TovarAddPage());
+            NavigationService.Navigate(new TovarAddPage(new Tovars()));
         }
 
         private void tbSearchTovarChanged(object sender, TextChangedEventArgs e)

@@ -93,6 +93,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="DataBase\Entity\TypeOfBread.cs" />
     <Compile Include="Migrations\C__MigrationHistory.cs" />
     <Compile Include="DataBase\EfModel.cs" />
     <Compile Include="DataBase\Entity\IngridientLevels.cs" />

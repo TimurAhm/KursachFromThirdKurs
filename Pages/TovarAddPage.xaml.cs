@@ -24,7 +24,7 @@ namespace WpfExampleTimur343.Pages
     public partial class TovarAddPage : Page
     {
         Tovars tovars;
-        public TovarAddPage()
+        public TovarAddPage(Tovars tovars)
         {
             this.tovars = tovars;
             InitializeComponent();

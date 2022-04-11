@@ -33,7 +33,7 @@
                         </StackPanel>
                     </Label.Content>
                 </Label>
-                <ComboBox Name="CbBreadType" Text="{Binding TovarPicture}" Height="30">
+                <ComboBox Name="CbBreadType" Text="{Binding TovarPicture}" Height="30" DisplayMemberPath="{Binding Tovar}">
                     <ComboBox.ItemsPanel>
                         <ItemsPanelTemplate>
                             <WrapPanel Orientation="Horizontal" ScrollViewer.VerticalScrollBarVisibility="Disabled"/>
