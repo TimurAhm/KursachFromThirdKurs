@@ -28,7 +28,7 @@ namespace WpfExampleTimur343.Pages
         {
             this.tovars = tovars;
             InitializeComponent();
-            CbBreadType.ItemsSource = EfModel.Init().Tovars.ToList();
+//            CbBreadType.ItemsSource = EfModel.Init().Tovars.ToList();
             DataContext = tovars;
         }
 
@@ -48,6 +48,12 @@ namespace WpfExampleTimur343.Pages
         {
             if (tovars.TovarId == 0)
                 EfModel.Init().Tovars.Add(tovars);
+            EfModel.Init().SaveChanges();
+        }
+
+        private void btDeleteClick(object sender, RoutedEventArgs e)
+        {
+            EfModel.Init().Tovars.Remove(tovars);
             EfModel.Init().SaveChanges();
         }
     }

@@ -8,10 +8,6 @@ using System.Threading.Tasks;
 namespace WpfExampleTimur343.DataBase.Entity
 {
     public partial class TypeOfBread
-    {
-        [Key]
-        public int TypeOfBreadId {get; set;}
-
-        public string 
+    { 
     }
 }

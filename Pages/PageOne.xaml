@@ -61,7 +61,6 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-
         <Button Name="tbAddTovar" Grid.Row="2" Height="30" Content="Добавить" Margin="10" Click="btAddTovarClick"/>
     </Grid>
 </Page>

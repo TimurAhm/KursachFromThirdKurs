@@ -26,7 +26,7 @@
                 <TextBox Text="{Binding TovarExpirationDate}"/>
                 <TextBlock Text="Цена товара"/>
                 <TextBox Text="{Binding TovarPrice}"/>
-                <Label>
+                <!-- <Label>
                     <Label.Content>
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="Виды хлеба"/>
@@ -39,17 +39,24 @@
                             <WrapPanel Orientation="Horizontal" ScrollViewer.VerticalScrollBarVisibility="Disabled"/>
                         </ItemsPanelTemplate>
                     </ComboBox.ItemsPanel>
-                   <!-- <ComboBox.ItemTemplate>
+                    <ComboBox.ItemTemplate>
                         <DataTemplate>
                             <StackPanel Orientation="Horizontal">
                                 <Image Source="{Binding CountryFlag}" Width="200"/>
                                 <TextBlock Text="{Binding CountryName}" VerticalAlignment="Center"/>
                             </StackPanel>
                         </DataTemplate>
-                    </ComboBox.ItemTemplate>-->
-                </ComboBox>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>-->
             </StackPanel>
         </ScrollViewer>
-        <Button Grid.Row="1" Content="Сохранить" Click="btSaveTovarClick"/>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" Content="Сохранить" Click="btSaveTovarClick"/>
+            <Button Grid.Column="1" Content="Удалить" Click="btDeleteClick"/>
+        </Grid>
     </Grid>
 </Page>
