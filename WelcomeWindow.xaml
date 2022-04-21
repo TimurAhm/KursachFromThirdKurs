@@ -3,13 +3,18 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:gif="http://wpfanimatedgif.codeplex.com"
         xmlns:local="clr-namespace:WpfExampleTimur343"
         mc:Ignorable="d"
         Title=""  Height="450" Width="800" WindowState="Maximized" Style="{StaticResource WindowStyle}">
     
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="/Resources/AuthGIF.gif"/>
+            <VisualBrush>
+                <VisualBrush.Visual>
+                    <Image gif:ImageBehavior.AnimatedSource="/Resources/AuthGIF.gif"/>
+                </VisualBrush.Visual>
+            </VisualBrush>
         </Grid.Background>
         <Button Click="btWelcomeClick" Content="Войти" FontSize="40" FontStyle="Oblique"  Background="Transparent" Height="60" Width="580" Margin="135,468,165,116" RenderTransformOrigin="0.5,0.5">
             <Button.RenderTransform>
