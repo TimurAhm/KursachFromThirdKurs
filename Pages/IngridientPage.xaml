@@ -1,4 +1,4 @@
-﻿<Page x:Class="WpfExampleTimur343.Pages.PageOne"
+﻿<Page x:Class="WpfExampleTimur343.Pages.IngridientPage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:WpfExampleTimur343.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="PageOne">
+      Title="IngridientPage">
 
     <Grid>
         <Grid.RowDefinitions>
@@ -14,16 +14,18 @@
             <RowDefinition Height="8*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <TextBox Name="tbSearchTovar" Height="45" VerticalAlignment="Top" TextChanged="tbSearchTovarChanged">
+        <TextBox Name="tbSearchIngridient" Height="45" VerticalAlignment="Top" TextChanged="tbSearchIngridientChanged">
             <TextBox.Background>
                 <ImageBrush ImageSource="/Resources/поиск.png" AlignmentX="Left" Stretch="None"/>
             </TextBox.Background>
         </TextBox>
-            <ListView Grid.Row="1" Name="LvTovars" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+        
+        <!--TextChanged="tbSearchTovarChanged"-->
+        <ListView Grid.Row="1" Name="LvIngridients" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
             <ListView.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Wheat"/>
-                    <GradientStop Color="#FFAE8585" Offset="1"/>
+                    <GradientStop Color="#FFA650C5" Offset="1"/>
                 </LinearGradientBrush>
             </ListView.Background>
             <ListView.ItemsPanel>
@@ -45,23 +47,22 @@
                                 <RowDefinition/>
                                 <RowDefinition Height="25"/>
                                 <RowDefinition Height="25"/>
-                                <RowDefinition Height="40"/>
+                                <RowDefinition Height="25"/>
                             </Grid.RowDefinitions>
-                            <Image Source="{Binding TovarPicture, TargetNullValue={StaticResource Picture}}"/>
-                            <TextBlock Grid.Row="1" Text="{Binding TovarName}" HorizontalAlignment="Center"/>
+                            <Image Source="{Binding IngridientPicture, TargetNullValue={StaticResource Picture}}"/>
+                            <TextBlock Grid.Row="1" Text="{Binding IngiridientName}" HorizontalAlignment="Center"/>
 
                             <!--"<TextBlock Grid.Row="2" Text="{Binding UserBalance, StringFormat='Баланс: {0} руб'}" HorizontalAlignment="Center" />-->
                             <TextBlock Grid.Row="2" HorizontalAlignment="Center">
                                 <TextBlock.Text>
-                                    <MultiBinding StringFormat="{} Количество - {0} шт." >
-                                        <Binding Path="TovarCount"/>
+                                    <MultiBinding StringFormat="{}{0} - {1}" >
+                                        <Binding Path="IngridientName"/>
+                                        <Binding Path="IngridientCount"/>
                                     </MultiBinding>
                                 </TextBlock.Text>
                             </TextBlock>
-                            <StackPanel Grid.Row="3">
-                                <Button Content="Данные" Click="btTovarClick"/>
-                                <Button Content="Редактировать" Click="btEditClick"/>
-                            </StackPanel>
+                            <Button Grid.Row="3" Content="Редактировать" Click="btEditIngridient" />
+                            <!--Click="btEditClick"-->
                         </Grid>
                     </Border>
                 </DataTemplate>
@@ -72,8 +73,9 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Button Name="tbAddTovar" Grid.Column="0" Height="50" Content="Добавить" Click="btAddTovarClick"/>
-            <Button Name="tbDeleteTovar" Grid.Column="1" Height="50" Content="Удалить " Click="btDeleteTovarClick"/>
+            <Button Click="btAddIngridient" Grid.Row="2" Height="50" Content="Добавить"/>
+            <Button Name="tbDeleteTovar" Grid.Column="1" Height="50" Content="Удалить " Click="btDeleteIngridientClick"/>
         </Grid>
+        <!--Click="btAddTovarClick"-->
     </Grid>
 </Page>

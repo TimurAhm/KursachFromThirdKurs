@@ -19,17 +19,16 @@ using WpfExampleTimur343.DataBase;
 namespace WpfExampleTimur343.Pages
 {
     /// <summary>
-    /// Interaction logic for TovarAddPage.xaml
+    /// Interaction logic for IngridientAddPage.xaml
     /// </summary>
-    public partial class TovarAddPage : Page
+    public partial class IngridientAddPage : Page
     {
-        Tovars tovars;
-        public TovarAddPage(Tovars tovars)
+        Ingridients ingridients;
+        public IngridientAddPage(Ingridients ingridients)
         {
-            this.tovars = tovars;
+            this.ingridients = ingridients;
             InitializeComponent();
-//            CbBreadType.ItemsSource = EfModel.Init().Tovars.ToList();
-            DataContext = tovars;
+            DataContext = ingridients;
         }
 
         private void ImageClick(object sender, MouseButtonEventArgs e)
@@ -40,21 +39,21 @@ namespace WpfExampleTimur343.Pages
             };
             if (openFile.ShowDialog() == true)
             {
-                tovars.TovarPicture = File.ReadAllBytes(openFile.FileName);
+                ingridients.IngridientPicture = File.ReadAllBytes(openFile.FileName);
             }
         }
 
-        private void btSaveTovarClick(object sender, RoutedEventArgs e)
+        private void btSaveIngridientClick(object sender, RoutedEventArgs e)
         {
-            if (tovars.TovarId == 0)
-                EfModel.Init().Tovars.Add(tovars);
+            if (ingridients.IngridientId == 0)
+                EfModel.Init().Ingridients.Add(ingridients);
             EfModel.Init().SaveChanges();
         }
 
-        private void btDeleteClick(object sender, RoutedEventArgs e)
-        {
-         
-            
-        }
+      //  private void btDeleteIngridientClick(object sender, RoutedEventArgs e)
+      //  {
+      //      EfModel.Init().Ingridients.Remove(ingridients);
+      //      EfModel.Init().SaveChanges();
+      //  }
     }
 }

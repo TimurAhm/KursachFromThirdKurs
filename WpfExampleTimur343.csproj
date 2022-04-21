@@ -85,6 +85,34 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="DataBase\Entity\TovarLevelAutumn.cs" />
+    <Compile Include="DataBase\Entity\TovarLevelSpring.cs" />
+    <Compile Include="DataBase\Entity\TovarLevelWinter.cs" />
+    <Compile Include="Pages\IngridientAddPage.xaml.cs">
+      <DependentUpon>IngridientAddPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\TovarDecriptionPage.xaml.cs">
+      <DependentUpon>TovarDecriptionPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\TovarLevelPageAutumn.xaml.cs">
+      <DependentUpon>TovarLevelPageAutumn.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\TovarLevelPageSpring.xaml.cs">
+      <DependentUpon>TovarLevelPageSpring.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\TovarLevelPage.xaml.cs">
+      <DependentUpon>TovarLevelPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\TovarLevelPageWinter.xaml.cs">
+      <DependentUpon>TovarLevelPageWinter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WelcomeWindow.xaml.cs">
+      <DependentUpon>WelcomeWindow.xaml</DependentUpon>
+    </Compile>
+    <Page Include="AuthorizationWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -93,18 +121,28 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="DataBase\Entity\TypeOfBread.cs" />
+    <Compile Include="AuthorizationWindow.xaml.cs">
+      <DependentUpon>AuthorizationWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\C__MigrationHistory.cs" />
     <Compile Include="DataBase\EfModel.cs" />
     <Compile Include="DataBase\Entity\IngridientLevels.cs" />
     <Compile Include="DataBase\Entity\Ingridients.cs" />
-    <Compile Include="DataBase\Entity\TovarLevels.cs" />
+    <Compile Include="DataBase\Entity\TovarLevelsSummer.cs" />
     <Compile Include="DataBase\Entity\Tovars.cs" />
     <Compile Include="DataBase\Entity\Users.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Pages\IngridientAddPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\IngridientPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\PageOne.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -113,8 +151,35 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\TovarDecriptionPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\TovarLevelPageAutumn.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\TovarLevelPageSpring.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\TovarLevelPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\TovarLevelPageWinter.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WelcomeWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pages\IngridientPage.xaml.cs">
+      <DependentUpon>IngridientPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\PageOne.xaml.cs">
       <DependentUpon>PageOne.xaml</DependentUpon>
     </Compile>
@@ -156,7 +221,27 @@
   <ItemGroup>
     <Resource Include="Resources\maxresdefault.jpg" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Resources\ГотовыйФон.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\поиск.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\поискПустой.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\avtorizatia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Фон.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\фонХЧ.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\AuthGIF.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

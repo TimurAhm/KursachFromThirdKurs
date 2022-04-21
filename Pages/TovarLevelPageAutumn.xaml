@@ -1,0 +1,19 @@
+﻿<Page x:Class="WpfExampleTimur343.Pages.TovarLevelPageAutumn"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfExampleTimur343.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="TovarLevelPageAutumn">
+
+    <Grid>
+        <DataGrid Name="DgvTovarLvlAutumn" AutoGenerateColumns="False" Background="Orange" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Товар" Width="*" Binding="{Binding TovarNameLvlAutumn}"/>
+                <DataGridTextColumn Header="Количество" Width="*" Binding="{Binding TovarCountLvlAutumn}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Page>

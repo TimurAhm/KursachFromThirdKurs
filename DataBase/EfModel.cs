@@ -3,6 +3,7 @@ using System;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity;
 using System.Linq;
+using WpfExampleTimur343.DataBase.Entity;
 
 namespace WpfExampleTimur343.DataBase
 {
@@ -24,9 +25,12 @@ namespace WpfExampleTimur343.DataBase
         public virtual DbSet<C__MigrationHistory> C__MigrationHistory { get; set; }
         public virtual DbSet<IngridientLevels> IngridientLevels { get; set; }
         public virtual DbSet<Ingridients> Ingridients { get; set; }
-        public virtual DbSet<TovarLevels> TovarLevels { get; set; }
+        public virtual DbSet<TovarLevelsSummer> TovarLevels { get; set; }
         public virtual DbSet<Tovars> Tovars { get; set; }
         public virtual DbSet<Users> Users { get; set; }
+        public virtual DbSet<TovarLevelAutumn> TovarLevelAutumns { get; set; }
+        public virtual DbSet<TovarLevelSpring> TovarLevelSprings { get; set; }
+        public virtual DbSet<TovarLevelWinter> TovarLevelWinters { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -50,8 +54,8 @@ namespace WpfExampleTimur343.DataBase
                 .Property(e => e.IngridientName)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<TovarLevels>()
-                .Property(e => e.TovarName)
+            modelBuilder.Entity<TovarLevelsSummer>()
+                .Property(e => e.TovarNameLvl)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Tovars>()

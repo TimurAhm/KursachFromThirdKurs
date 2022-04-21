@@ -1,4 +1,4 @@
-﻿<Page x:Class="WpfExampleTimur343.Pages.TovarAddPage"
+﻿<Page x:Class="WpfExampleTimur343.Pages.IngridientAddPage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:WpfExampleTimur343.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="TovarAddPage">
+      Title="IngridientAddPage">
 
     <Grid Background="AliceBlue">
         <Grid.RowDefinitions>
@@ -15,17 +15,16 @@
         </Grid.RowDefinitions>
         <ScrollViewer ScrollViewer.VerticalScrollBarVisibility="Auto">
             <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Width="600">
-                <Image Source="{Binding TovarPicture, TargetNullValue={StaticResource Picture}}" Height="200" MouseDown="ImageClick"/>
+                <Image Source="{Binding IngridientPicture, TargetNullValue={StaticResource Picture}}" Height="200" MouseDown="ImageClick"/>
                 <TextBlock Text="Имя"/>
-                <TextBox Text="{Binding TovarName}"/>
+                <TextBox Text="{Binding IngridientName}"/>
                 <TextBlock Text="Количество"/>
-                <TextBox Text="{Binding TovarCount}"/>
+                <TextBox Text="{Binding IngridientCount}"/>
                 <TextBlock Text="Дата создания"/>
-                <TextBox Text="{Binding TovarCreateDate}"/>
+                <TextBox Text="{Binding IngridientCreateDate}"/>
                 <TextBlock Text="Дата выхода срока годности"/>
-                <TextBox Text="{Binding TovarExpirationDate}"/>
-                <TextBlock Text="Цена товара"/>
-                <TextBox Text="{Binding TovarPrice}"/>
+                <TextBox Text="{Binding IngridientExpirationDate}"/>
+     
                 <!-- <Label>
                     <Label.Content>
                         <StackPanel Orientation="Horizontal">
@@ -51,7 +50,7 @@
             </StackPanel>
         </ScrollViewer>
         <Grid Grid.Row="1">
-            <Button Grid.Column="0" Content="Сохранить" Click="btSaveTovarClick"/>
+            <Button Grid.Column="0" Content="Сохранить" Click="btSaveIngridientClick"/>
         </Grid>
     </Grid>
 </Page>

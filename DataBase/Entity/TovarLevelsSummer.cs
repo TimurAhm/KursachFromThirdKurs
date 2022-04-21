@@ -7,11 +7,11 @@ namespace WpfExampleTimur343.DataBase
     using System.Data.Entity.Spatial;
 
     [Table("TovarLevels")]
-    public partial class TovarLevels
+    public partial class TovarLevelsSummer
     {
         [Key]
-        public string TovarName { get; set; }
+        public string TovarNameLvl { get; set; }
 
-        public int TovarCount { get; set; }
+        public int TovarCountLvl { get; set; }
     }
 }

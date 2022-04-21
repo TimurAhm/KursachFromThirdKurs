@@ -17,38 +17,37 @@ using WpfExampleTimur343.DataBase;
 namespace WpfExampleTimur343.Pages
 {
     /// <summary>
-    /// Interaction logic for PageOne.xaml
+    /// Interaction logic for IngridientPage.xaml
     /// </summary>
-    public partial class PageOne : Page
+    public partial class IngridientPage : Page
     {
-       // Tovars tovars1;
         private void UpdateData()
         {
-            LvTovars.ItemsSource = EfModel.Init().Tovars.Where(t => t.TovarName.Contains(tbSearchTovar.Text)).ToList();
+            LvIngridients.ItemsSource = EfModel.Init().Ingridients.Where(t => t.IngridientName.Contains(tbSearchIngridient.Text)).ToList();
         }
-        public PageOne()
+        public IngridientPage()
         {
             InitializeComponent();
-            LvTovars.ItemsSource = EfModel.Init().Tovars.ToList();
+            LvIngridients.ItemsSource = EfModel.Init().Ingridients.ToList();
         }
 
-        private void btEditClick(object sender, RoutedEventArgs e)
+        private void btEditIngridient(object sender, RoutedEventArgs e)
         {
-            Tovars tovars = (sender as Button).DataContext as Tovars;
-            NavigationService.Navigate(new TovarAddPage(tovars));
+            Ingridients ingridients = (sender as Button).DataContext as Ingridients;
+            NavigationService.Navigate(new IngridientAddPage(ingridients));
         }
 
-        private void btAddTovarClick(object sender, RoutedEventArgs e)
+        private void btAddIngridient(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new TovarAddPage(new Tovars()));
+            NavigationService.Navigate(new IngridientAddPage(new Ingridients()));
         }
 
-        private void tbSearchTovarChanged(object sender, TextChangedEventArgs e)
+        private void tbSearchIngridientChanged(object sender, TextChangedEventArgs e)
         {
             UpdateData();
-            if (tbSearchTovar.Text == "")
+            if (tbSearchIngridient.Text == "")
             {
-                tbSearchTovar.Background = null;
+                tbSearchIngridient.Background = null;
                 // Create an ImageBrush.
                 ImageBrush textImageBrush = new ImageBrush();
                 textImageBrush.ImageSource =
@@ -58,38 +57,32 @@ namespace WpfExampleTimur343.Pages
                 textImageBrush.AlignmentX = AlignmentX.Left;
                 textImageBrush.Stretch = Stretch.None;
                 // Use the brush to paint the button's background.
-                tbSearchTovar.Background = textImageBrush;
+                tbSearchIngridient.Background = textImageBrush;
             }
             else
             {
-                tbSearchTovar.Background = null;
+                tbSearchIngridient.Background = null;
                 ImageBrush textimageBrush = new ImageBrush();
                 textimageBrush.ImageSource = new BitmapImage(
                     new Uri(@"C:\Users\User\source\repos\KurschTimurWPF2\Resources\поискПустой.png", UriKind.Relative));
                 textimageBrush.AlignmentX = AlignmentX.Left;
                 textimageBrush.Stretch = Stretch.None;
-                tbSearchTovar.Background= textimageBrush;
+                tbSearchIngridient.Background = textimageBrush;
             }
         }
 
-        private void btTovarClick(object sender, RoutedEventArgs e)
+        private void btDeleteIngridientClick(object sender, RoutedEventArgs e)
         {
-            Tovars tovars = (sender as Button).DataContext as Tovars;
-            NavigationService.Navigate(new TovarDecriptionPage(tovars));
-        }
-
-        private void btDeleteTovarClick(object sender, RoutedEventArgs e)
-        {
-            if (LvTovars.SelectedItems.Count > 0)
+            if (LvIngridients.SelectedItems.Count > 0)
             {
-                Tovars tovars = LvTovars.SelectedItems[0] as Tovars;
-                if (MessageBox.Show("Вы удаляете этот товар :" + tovars.TovarName + "?", "Удалить товар", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+                Ingridients ingridients = LvIngridients.SelectedItems[0] as Ingridients;
+                if (MessageBox.Show("Вы удаляете этот ингридиент: " + ingridients.IngridientName + "?", "Удалить товар", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
                 {
-                    EfModel.Init().Tovars.Remove(tovars);
+                    EfModel.Init().Ingridients.Remove(ingridients);
                     EfModel.Init().SaveChanges();
                 }
                 UpdateData();
-      
+
             }
         }
     }

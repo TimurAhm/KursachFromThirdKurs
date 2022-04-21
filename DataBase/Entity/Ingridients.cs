@@ -21,5 +21,8 @@ namespace WpfExampleTimur343.DataBase
         public DateTime IngridientCreateDate { get; set; }
 
         public DateTime IngridientExpirationDate { get; set; }
+
+        [Column(TypeName = "blob")]
+        public byte[] IngridientPicture { get; set; }
     }
 }

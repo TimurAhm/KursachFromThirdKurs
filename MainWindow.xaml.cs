@@ -37,5 +37,35 @@ namespace WpfExampleTimur343
         {
             PageSwitcher.Navigate(new PageOne());
         }
+
+        private void IngridientsPageClick(object sender, RoutedEventArgs e)
+        {
+            PageSwitcher.Navigate(new IngridientPage());
+        }
+
+        private void TovarLevelClick(object sender, RoutedEventArgs e)
+        {
+            PageSwitcher.Navigate(new TovarLevelPage());
+        }
+
+        private void btTovarLvlPageSummerClick(object sender, RoutedEventArgs e)
+        {
+            PageSwitcher.Navigate(new TovarLevelPage());
+        }
+
+        private void btTovarLvlPageAutumnClick(object sender, RoutedEventArgs e)
+        {
+            PageSwitcher.Navigate(new TovarLevelPageAutumn());
+        }
+
+        private void btTovarLvlPageWinterClick(object sender, RoutedEventArgs e)
+        {
+            PageSwitcher.Navigate(new TovarLevelPageWinter());
+        }
+
+        private void btTovarLvlPageSpringClick(object sender, RoutedEventArgs e)
+        {
+            PageSwitcher.Navigate(new TovarLevelPageSpring());
+        }
     }
 }
