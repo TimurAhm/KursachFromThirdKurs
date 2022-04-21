@@ -9,7 +9,13 @@
       Title="TovarLevelPageWinter">
 
     <Grid>
-        <DataGrid Name="DgvTovarLvlWinter" AutoGenerateColumns="False" Background="Orange" IsReadOnly="True">
+        <DataGrid Name="DgvTovarLvlWinter" AutoGenerateColumns="False" IsReadOnly="True">
+            <DataGrid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Wheat"/>
+                    <GradientStop Color="#FFAE8585" Offset="1"/>
+                </LinearGradientBrush>
+            </DataGrid.Background>
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Товар" Width="*" Binding="{Binding TovarLevelWinterName}"/>
                 <DataGridTextColumn Header="Количество" Width="*" Binding="{Binding TovarLevelWinterCount}"/>

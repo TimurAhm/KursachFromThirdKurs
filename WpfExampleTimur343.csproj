@@ -91,6 +91,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="DataBase\AuthClass.cs" />
     <Compile Include="DataBase\Entity\TovarLevelAutumn.cs" />
     <Compile Include="DataBase\Entity\TovarLevelSpring.cs" />
     <Compile Include="DataBase\Entity\TovarLevelWinter.cs" />

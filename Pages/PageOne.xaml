@@ -19,7 +19,7 @@
                 <ImageBrush ImageSource="/Resources/поиск.png" AlignmentX="Left" Stretch="None"/>
             </TextBox.Background>
         </TextBox>
-            <ListView Grid.Row="1" Name="LvTovars" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+        <ListView Grid.Row="1" Name="LvTovars" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
             <ListView.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Wheat"/>
@@ -60,14 +60,14 @@
                             </TextBlock>
                             <StackPanel Grid.Row="3">
                                 <Button Content="Данные" Click="btTovarClick"/>
-                                <Button Content="Редактировать" Click="btEditClick"/>
+                                <Button Name="btEditTovar" Content="Редактировать" Click="btEditClick"/>
                             </StackPanel>
                         </Grid>
                     </Border>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        <Grid Grid.Row ="2">
+        <Grid Name="Grid2" Grid.Row ="2">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>

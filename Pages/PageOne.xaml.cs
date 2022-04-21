@@ -29,6 +29,10 @@ namespace WpfExampleTimur343.Pages
         public PageOne()
         {
             InitializeComponent();
+            if(AuthClass.users.UserPriority == "user")
+            {
+            //    Grid2(new btEditClick)
+            }
             LvTovars.ItemsSource = EfModel.Init().Tovars.ToList();
         }
 

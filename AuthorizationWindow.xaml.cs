@@ -29,11 +29,13 @@ namespace WpfExampleTimur343
         {
             if (EfModel.Init().Users.Any(u => u.UserLogin == tbLogin.Text && u.UserPass == tbPass.Text))
             {
-                MainWindow mainWindow = new MainWindow();
-                Hide();
-                MessageBox.Show("Добро пожаловать!");
-                mainWindow.ShowDialog();
-                Close();
+                if (AuthClass.Auth(tbLogin.Text,tbPass.Text)) {
+                    MainWindow mainWindow = new MainWindow();
+                    Hide();
+                    MessageBox.Show("Добро пожаловать!");
+                    mainWindow.ShowDialog();
+                    Close();
+                }
             }
         }
     }

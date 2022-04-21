@@ -23,5 +23,7 @@ namespace WpfExampleTimur343.DataBase
         [Required]
         [StringLength(1073741823)]
         public string UserPass { get; set; }
+        [Required]
+        public string UserPriority { get; set; }
     }
 }
