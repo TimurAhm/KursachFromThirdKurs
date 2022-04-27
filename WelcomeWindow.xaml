@@ -7,8 +7,12 @@
         xmlns:local="clr-namespace:WpfExampleTimur343"
         mc:Ignorable="d"
         Title=""  Height="450" Width="800" WindowState="Maximized" Style="{StaticResource WindowStyle}">
-    
+
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
         <Grid.Background>
             <VisualBrush>
                 <VisualBrush.Visual>
@@ -16,25 +20,39 @@
                 </VisualBrush.Visual>
             </VisualBrush>
         </Grid.Background>
-        <Button Click="btWelcomeClick" Content="Войти" FontSize="40" FontStyle="Oblique"  Background="Gainsboro" Height="60" Width="580" Margin="135,468,165,116" RenderTransformOrigin="0.5,0.5">
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="5.872"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Button.RenderTransform>
-        </Button>
-        <Button Content="Выйти" FontSize="40" FontStyle="Oblique" Background="Gainsboro" Height="60" Width="580" Margin="120,600,165,116" RenderTransformOrigin="0.5,0.5">
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="5.872"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Button.RenderTransform>
-        </Button>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Bottom" Orientation="Vertical">
+            <TextBlock Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="100" TextWrapping="Wrap" FontFamily="Source Code Pro Black" FontWeight="Bold">
+                <Run FontStyle="Oblique" FontSize="60" Foreground="Red">СПО-</Run>
+                <Run Text="ПО~Хлебозавод" FontSize="60" FontStyle="Oblique" Foreground="Firebrick" />
+                <TextBlock.Effect>
+                    <DropShadowEffect
+                        ShadowDepth="7"
+                        Direction="330"
+                        Color="Black"
+                        Opacity="0.5"
+                        BlurRadius="4"/>
+                </TextBlock.Effect>
+            </TextBlock>
+            <Button Click="btWelcomeClick" Content="Войти" FontSize="40" FontStyle="Oblique"  Background="Gainsboro" Height="60" Width="580" RenderTransformOrigin="0.5,0.5">
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="5.872"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+            <Button Content="Выйти" FontSize="40" FontStyle="Oblique" Background="Gainsboro" Height="60" Width="580"  RenderTransformOrigin="0.5,0.5" Margin="50" Click="Close">
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="5.872"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+        </StackPanel>
     </Grid>
 </Window>

@@ -31,5 +31,10 @@ namespace WpfExampleTimur343
             authorizationWindow.ShowDialog();
             Show();
         }
+
+        private void Close(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
     }
 }

@@ -48,6 +48,7 @@ namespace WpfExampleTimur343.Pages
             if (ingridients.IngridientId == 0)
                 EfModel.Init().Ingridients.Add(ingridients);
             EfModel.Init().SaveChanges();
+            NavigationService.Navigate(new IngridientPage());
         }
 
       //  private void btDeleteIngridientClick(object sender, RoutedEventArgs e)

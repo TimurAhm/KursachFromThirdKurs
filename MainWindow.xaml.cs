@@ -30,7 +30,6 @@ namespace WpfExampleTimur343
 
         private void FirstFormClick(object sender, RoutedEventArgs e)
         {
-            
         }
 
         private void PageOneClick(object sender, RoutedEventArgs e)
@@ -78,6 +77,16 @@ namespace WpfExampleTimur343
             {
                 PageSwitcher.Navigate(new UserPage());
             }
+        }
+
+        private void Close(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
+        private void MapClick(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

@@ -50,6 +50,7 @@ namespace WpfExampleTimur343.Pages
             if (users.UserId == 0)
                 EfModel.Init().Users.Add(users);
             EfModel.Init().SaveChanges();
+            NavigationService.Navigate(new UserPage());
         }
 
         private void btRandomPassGeneratorClick(object sender, RoutedEventArgs e)

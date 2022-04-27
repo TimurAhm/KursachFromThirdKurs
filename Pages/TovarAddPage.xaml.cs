@@ -49,6 +49,7 @@ namespace WpfExampleTimur343.Pages
             if (tovars.TovarId == 0)
                 EfModel.Init().Tovars.Add(tovars);
             EfModel.Init().SaveChanges();
+            NavigationService.Navigate(new PageOne());
         }
 
         private void btDeleteClick(object sender, RoutedEventArgs e)
