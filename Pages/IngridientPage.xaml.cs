@@ -33,13 +33,27 @@ namespace WpfExampleTimur343.Pages
 
         private void btEditIngridient(object sender, RoutedEventArgs e)
         {
-            Ingridients ingridients = (sender as Button).DataContext as Ingridients;
-            NavigationService.Navigate(new IngridientAddPage(ingridients));
+            if (AuthClass.users.UserPriority == "user")
+            {
+                MessageBox.Show("У вас недостаточно прав");
+            }
+            else
+            {
+                Ingridients ingridients = (sender as Button).DataContext as Ingridients;
+                NavigationService.Navigate(new IngridientAddPage(ingridients));
+            }
         }
 
         private void btAddIngridient(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new IngridientAddPage(new Ingridients()));
+            if (AuthClass.users.UserPriority == "user")
+            {
+                MessageBox.Show("У вас недостаточно прав");
+            }
+            else
+            {
+                NavigationService.Navigate(new IngridientAddPage(new Ingridients()));
+            }
         }
 
         private void tbSearchIngridientChanged(object sender, TextChangedEventArgs e)
@@ -73,17 +87,31 @@ namespace WpfExampleTimur343.Pages
 
         private void btDeleteIngridientClick(object sender, RoutedEventArgs e)
         {
-            if (LvIngridients.SelectedItems.Count > 0)
+            if (AuthClass.users.UserPriority == "user")
             {
-                Ingridients ingridients = LvIngridients.SelectedItems[0] as Ingridients;
-                if (MessageBox.Show("Вы удаляете этот ингридиент: " + ingridients.IngridientName + "?", "Удалить товар", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
-                {
-                    EfModel.Init().Ingridients.Remove(ingridients);
-                    EfModel.Init().SaveChanges();
-                }
-                UpdateData();
-
+                
+                MessageBox.Show("У вас недостаточно прав");
             }
+            else
+            {
+                if (LvIngridients.SelectedItems.Count > 0)
+                {
+                    Ingridients ingridients = LvIngridients.SelectedItems[0] as Ingridients;
+                    if (MessageBox.Show("Вы удаляете этот ингридиент: " + ingridients.IngridientName + "?", "Удалить товар", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+                    {
+                        EfModel.Init().Ingridients.Remove(ingridients);
+                        EfModel.Init().SaveChanges();
+                    }
+                    UpdateData();
+
+                }
+            }
+        }
+
+        private void btIngridientClick(object sender, RoutedEventArgs e)
+        {
+            Ingridients ingridients = (sender as Button).DataContext as Ingridients;
+            NavigationService.Navigate(new IngridientDescriptionPage(ingridients));
         }
     }
 }

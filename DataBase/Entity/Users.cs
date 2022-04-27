@@ -25,5 +25,7 @@ namespace WpfExampleTimur343.DataBase
         public string UserPass { get; set; }
         [Required]
         public string UserPriority { get; set; }
+
+        public byte[] UsersPicture { get; set; }
     }
 }

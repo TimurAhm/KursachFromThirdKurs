@@ -95,8 +95,12 @@
     <Compile Include="DataBase\Entity\TovarLevelAutumn.cs" />
     <Compile Include="DataBase\Entity\TovarLevelSpring.cs" />
     <Compile Include="DataBase\Entity\TovarLevelWinter.cs" />
+    <Compile Include="DataBase\Entity\UserPriorityType.cs" />
     <Compile Include="Pages\IngridientAddPage.xaml.cs">
       <DependentUpon>IngridientAddPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\IngridientDescriptionPage.xaml.cs">
+      <DependentUpon>IngridientDescriptionPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\TovarDecriptionPage.xaml.cs">
       <DependentUpon>TovarDecriptionPage.xaml</DependentUpon>
@@ -112,6 +116,12 @@
     </Compile>
     <Compile Include="Pages\TovarLevelPageWinter.xaml.cs">
       <DependentUpon>TovarLevelPageWinter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\UserAddPage.xaml.cs">
+      <DependentUpon>UserAddPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\UserPage.xaml.cs">
+      <DependentUpon>UserPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="WelcomeWindow.xaml.cs">
       <DependentUpon>WelcomeWindow.xaml</DependentUpon>
@@ -143,6 +153,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Pages\IngridientAddPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\IngridientDescriptionPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -178,6 +192,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\UserAddPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\UserPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="WelcomeWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -196,11 +218,6 @@
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -208,7 +225,7 @@
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -218,9 +235,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\main.ico" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\picture.png" />
@@ -248,6 +262,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\AuthGIF.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\zaglushka.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Federal_State_Educational_Establishment_Secondary_Professional_Education_“The_Volga_Region_State_College”.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -19,7 +19,7 @@ namespace WpfExampleTimur343
     /// Interaction logic for AuthorizationWindow.xaml
     /// </summary>
     public partial class AuthorizationWindow : Window
-    {
+    { 
         public AuthorizationWindow()
         {
             InitializeComponent();
@@ -29,10 +29,11 @@ namespace WpfExampleTimur343
         {
             if (EfModel.Init().Users.Any(u => u.UserLogin == tbLogin.Text && u.UserPass == tbPass.Text))
             {
+                Users users = new Users();
                 if (AuthClass.Auth(tbLogin.Text,tbPass.Text)) {
                     MainWindow mainWindow = new MainWindow();
-                    Hide();
-                    MessageBox.Show("Добро пожаловать!");
+                    MessageBox.Show("Добро пожаловать " + users.UserName + "!");
+                    Hide();    
                     mainWindow.ShowDialog();
                     Close();
                 }

@@ -60,7 +60,7 @@
                             </TextBlock>
                             <StackPanel Grid.Row="3">
                                 <Button Content="Данные" Click="btTovarClick"/>
-                                <Button Name="btEditTovar" Content="Редактировать" Click="btEditClick"/>
+                                <Button Content="Редактировать" Click="btEditClick"/>
                             </StackPanel>
                         </Grid>
                     </Border>
@@ -72,8 +72,8 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Button Name="tbAddTovar" Grid.Column="0" Height="50" Content="Добавить" Click="btAddTovarClick"/>
-            <Button Name="tbDeleteTovar" Grid.Column="1" Height="50" Content="Удалить " Click="btDeleteTovarClick"/>
+            <Button Grid.Column="0" Height="50" Content="Добавить" Click="btAddTovarClick"/>
+            <Button Grid.Column="1" Height="50" Content="Удалить " Click="btDeleteTovarClick"/>
         </Grid>
     </Grid>
 </Page>

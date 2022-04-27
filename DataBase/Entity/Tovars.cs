@@ -2,12 +2,14 @@ namespace WpfExampleTimur343.DataBase
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
+    using System.Runtime.CompilerServices;
 
     [Table("Tovars")]
-    public partial class Tovars
+    public partial class Tovars: INotifyPropertyChanged
     {
         [Key]
         public int TovarId { get; set; }
@@ -25,6 +27,23 @@ namespace WpfExampleTimur343.DataBase
         public decimal TovarPrice { get; set; }
 
         [Column(TypeName = "blob")]
-        public byte[] TovarPicture { get; set; }
+        public byte[] TovarImg;
+        public byte[] TovarPicture {
+            get { return TovarImg; }
+            set
+            {
+                TovarImg = value;
+                PropChange();
+            }
+        }
+
+
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        private void PropChange([CallerMemberName] string PropName = "")
+        {
+            if (PropertyChanged != null)
+                PropertyChanged(this, new PropertyChangedEventArgs(PropName));
+        }
     }
 }

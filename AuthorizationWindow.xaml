@@ -39,6 +39,7 @@
                 </TextBox.RenderTransform>
             </TextBox>
             <Button Width="300" Height="20" Margin="10" Content="Войти" Click="btLoginClick"/>
+            <Button Width="200" Height="20" Margin="10" Content="Выйти" />
         </StackPanel>
     </Grid>
 </Window>

@@ -16,7 +16,17 @@
                 </VisualBrush.Visual>
             </VisualBrush>
         </Grid.Background>
-        <Button Click="btWelcomeClick" Content="Войти" FontSize="40" FontStyle="Oblique"  Background="Transparent" Height="60" Width="580" Margin="135,468,165,116" RenderTransformOrigin="0.5,0.5">
+        <Button Click="btWelcomeClick" Content="Войти" FontSize="40" FontStyle="Oblique"  Background="Gainsboro" Height="60" Width="580" Margin="135,468,165,116" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="5.872"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button Content="Выйти" FontSize="40" FontStyle="Oblique" Background="Gainsboro" Height="60" Width="580" Margin="120,600,165,116" RenderTransformOrigin="0.5,0.5">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>

@@ -67,5 +67,17 @@ namespace WpfExampleTimur343
         {
             PageSwitcher.Navigate(new TovarLevelPageSpring());
         }
+
+        private void btUsersClick(object sender, RoutedEventArgs e)
+        {
+            if (AuthClass.users.UserPriority == "user")
+            {
+                MessageBox.Show("У вас недостаточно прав");
+            }
+            else
+            {
+                PageSwitcher.Navigate(new UserPage());
+            }
+        }
     }
 }

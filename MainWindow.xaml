@@ -9,7 +9,7 @@
     
     <Window.Background>
         <RadialGradientBrush RadiusX="4">
-            <GradientStop Color="#FFBBB332" Offset="1"/>
+            <GradientStop Color="#FF76402D" Offset="1"/>
             <GradientStop Color="#FFFAFAFA"/>
         </RadialGradientBrush>
     </Window.Background>
@@ -45,7 +45,26 @@
                     </DataTemplate>
                 </ComboBox.ItemTemplate>
             </ComboBox>
+            <Label Height="288"/>
+            <Button Name="btUsers" Content="Работники" Click="btUsersClick" Height="50" Width="370" HorizontalAlignment="Right"> 
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Beige"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Label Height="4"/>
+            <Button Name="btExit" Content="Выйти" Height="50" Width="370" HorizontalAlignment="Right">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
         </StackPanel>
-        <Frame Grid.Column="0" Grid.Row="1" Name="PageSwitcher" NavigationUIVisibility="Hidden"/>
+        <Frame Grid.Column="0" Grid.Row="1" Name="PageSwitcher" NavigationUIVisibility="Hidden">
+        </Frame>
     </Grid>
 </Window>

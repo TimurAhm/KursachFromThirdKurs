@@ -21,6 +21,7 @@ namespace WpfExampleTimur343.Pages
     /// </summary>
     public partial class PageOne : Page
     {
+        
        // Tovars tovars1;
         private void UpdateData()
         {
@@ -29,22 +30,33 @@ namespace WpfExampleTimur343.Pages
         public PageOne()
         {
             InitializeComponent();
-            if(AuthClass.users.UserPriority == "user")
-            {
-            //    Grid2(new btEditClick)
-            }
             LvTovars.ItemsSource = EfModel.Init().Tovars.ToList();
         }
 
         private void btEditClick(object sender, RoutedEventArgs e)
         {
-            Tovars tovars = (sender as Button).DataContext as Tovars;
-            NavigationService.Navigate(new TovarAddPage(tovars));
+            if (AuthClass.users.UserPriority == "user")
+            {
+                MessageBox.Show("У вас недостаточно прав");
+            }
+            else
+            {
+                Tovars tovars = (sender as Button).DataContext as Tovars;
+                NavigationService.Navigate(new TovarAddPage(tovars));
+            }
+            
         }
 
         private void btAddTovarClick(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new TovarAddPage(new Tovars()));
+            if (AuthClass.users.UserPriority == "user")
+            {
+                MessageBox.Show("У вас недостаточно прав");
+            }
+            else
+            {
+                NavigationService.Navigate(new TovarAddPage(new Tovars()));
+            }
         }
 
         private void tbSearchTovarChanged(object sender, TextChangedEventArgs e)
@@ -84,16 +96,22 @@ namespace WpfExampleTimur343.Pages
 
         private void btDeleteTovarClick(object sender, RoutedEventArgs e)
         {
-            if (LvTovars.SelectedItems.Count > 0)
+            if (AuthClass.users.UserPriority == "user")
             {
-                Tovars tovars = LvTovars.SelectedItems[0] as Tovars;
-                if (MessageBox.Show("Вы удаляете этот товар :" + tovars.TovarName + "?", "Удалить товар", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+                MessageBox.Show("У вас недостаточно прав");
+            }
+            else
+            {
+                if (LvTovars.SelectedItems.Count > 0)
                 {
-                    EfModel.Init().Tovars.Remove(tovars);
-                    EfModel.Init().SaveChanges();
+                    Tovars tovars = LvTovars.SelectedItems[0] as Tovars;
+                    if (MessageBox.Show("Вы удаляете этот товар : " + tovars.TovarName + "?", "Удалить товар", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+                    {
+                        EfModel.Init().Tovars.Remove(tovars);
+                        EfModel.Init().SaveChanges();
+                    }
+                    UpdateData();
                 }
-                UpdateData();
-      
             }
         }
     }
