@@ -45,6 +45,28 @@ namespace WpfExampleTimur343.Pages
             mapControl.Position = new PointLatLng(54.091697, 52.540152); //Центральное расположение карты.
 
             mapControl.MouseLeftButtonDown += new MouseButtonEventHandler(mapControl_MouseLeftButtonDown);
+
+
+
+            List<PointLatLng> pointlatlang = new List<PointLatLng>();
+            pointlatlang.Add(new PointLatLng(54.091697, 52.540152));
+            pointlatlang.Add(new PointLatLng(54.092320, 52.540822));
+            pointlatlang.Add(new PointLatLng(54.091977069290365, 52.54180637059018));
+            pointlatlang.Add(new PointLatLng(54.09150042409676, 52.54092392385772));
+
+            //Declare polygon in gmap
+            GMapPolygon polygon = new GMapPolygon(pointlatlang);
+
+            Path path = new Path();
+            path.Fill = new SolidColorBrush(Colors.Red) { Opacity = 0.5 };
+            path.StrokeThickness = 1.5;
+            path.Stroke = Brushes.DarkBlue;
+            path.Effect = null;
+
+            polygon.Shape = path;
+
+            //To add polygon in gmap
+            mapControl.Markers.Add(polygon);
         }
 
         void mapControl_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -53,6 +75,8 @@ namespace WpfExampleTimur343.Pages
                PointLatLng point = mapControl.FromLocalToLatLng((int)clickPoint.X, (int)clickPoint.Y);
                GMapMarker marker = new GMapMarker(point);
                mapControl.Markers.Add(marker);
+            
+               
             if(Mouse.RightButton == MouseButtonState.Pressed)
                 marker.Shape = new Ellipse
                 {
