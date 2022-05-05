@@ -46,7 +46,8 @@
                 </ComboBox.ItemTemplate>
             </ComboBox>
             <Label Height="28"/>
-            <Button Content="Показать место на карте" Height="45" Width="370" HorizontalAlignment="Right" Click="MapClick" />
+            <!---->
+            <Button Content="Показать место на карте" Height="45" Width="370" HorizontalAlignment="Right" Click="MapClick" /> 
             <Label Height="288"/>
             <Button Name="btUsers" Content="Работники" Click="btUsersClick" Height="50" Width="370" HorizontalAlignment="Right"> 
                 <Button.Background>

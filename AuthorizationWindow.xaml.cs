@@ -26,10 +26,12 @@ namespace WpfExampleTimur343
 
         private void btLoginClick(object sender, RoutedEventArgs e)
         {
+            Mouse.OverrideCursor = Cursors.Wait;
             if (EfModel.Init().Users.Any(u => u.UserLogin == tbLogin.Text && u.UserPass == tbPass.Text))
             {
                 if (AuthClass.Auth(tbLogin.Text,tbPass.Text)) {
                     MainWindow mainWindow = new MainWindow();
+                    Mouse.OverrideCursor = null;
                     MessageBox.Show("Добро пожаловать " + AuthClass.users.UserName + "!");
                     Hide();    
                     mainWindow.ShowDialog();

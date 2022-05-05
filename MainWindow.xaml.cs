@@ -86,7 +86,7 @@ namespace WpfExampleTimur343
 
         private void MapClick(object sender, RoutedEventArgs e)
         {
-
+            PageSwitcher.Navigate(new MapPage());
         }
     }
 }

@@ -1,4 +1,7 @@
-﻿using System;
+﻿using GMap.NET;
+using GMap.NET.MapProviders;
+using GMap.NET.WindowsPresentation;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +26,46 @@ namespace WpfExampleTimur343.Pages
         public MapPage()
         {
             InitializeComponent();
+            try
+            {
+                System.Net.IPHostEntry e = System.Net.Dns.GetHostEntry("ditu.google.cn");
+            }
+            catch
+            {
+                mapControl.Manager.Mode = AccessMode.CacheOnly;
+                MessageBox.Show("No internet connection avaible, going to CacheOnly mode.", "GMap.NET Demo", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+
+            mapControl.MapProvider = GMapProviders.GoogleMap; //гугл карта
+            mapControl.MinZoom = 2;  //Минимальный зум
+            mapControl.MaxZoom = 17; //Максимальный зум
+            mapControl.Zoom = 13;     //Текущий зум
+            mapControl.ShowCenter = false; //Не показывать центральный крест
+            mapControl.DragButton = MouseButton.Left; //Щелкните левой кнопкой мыши, чтобы перетащить карту
+            mapControl.Position = new PointLatLng(54.091697, 52.540152); //Центральное расположение карты.
+
+            mapControl.MouseLeftButtonDown += new MouseButtonEventHandler(mapControl_MouseLeftButtonDown);
+        }
+
+        void mapControl_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+               Point clickPoint = e.GetPosition(mapControl);
+               PointLatLng point = mapControl.FromLocalToLatLng((int)clickPoint.X, (int)clickPoint.Y);
+               GMapMarker marker = new GMapMarker(point);
+               mapControl.Markers.Add(marker);
+            if(Mouse.RightButton == MouseButtonState.Pressed)
+                marker.Shape = new Ellipse
+                {
+                    Width = 10,
+                    Height = 10,
+                    Stroke = Brushes.Red,
+                    StrokeThickness = 3
+                };
+        }
+
+        private void mapView_Loaded(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
