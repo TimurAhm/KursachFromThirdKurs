@@ -34,7 +34,8 @@ namespace WpfExampleTimur343
 
         private void Close(object sender, RoutedEventArgs e)
         {
-            WpfExampleTimur343.App.Current.Shutdown();
+            // App.Current.Shutdown();
+            Close();
         }
     }
 }

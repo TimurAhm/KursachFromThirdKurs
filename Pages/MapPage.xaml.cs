@@ -61,6 +61,8 @@ namespace WpfExampleTimur343.Pages
                     Stroke = Brushes.Red,
                     StrokeThickness = 3
                 };
+            if (Mouse.MiddleButton == MouseButtonState.Pressed)
+                mapControl.Markers.Clear();
         }
 
         private void mapView_Loaded(object sender, RoutedEventArgs e)

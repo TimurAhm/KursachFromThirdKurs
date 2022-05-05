@@ -13,5 +13,9 @@ namespace WpfExampleTimur343
     /// </summary>
     public partial class App : Application
     {
+        public App()
+        {
+            ShutdownMode = ShutdownMode.OnLastWindowClose;
+        }
     }
 }

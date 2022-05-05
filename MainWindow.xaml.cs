@@ -82,6 +82,7 @@ namespace WpfExampleTimur343
         private void Close(object sender, RoutedEventArgs e)
         {
             Close();
+            
         }
 
         private void MapClick(object sender, RoutedEventArgs e)
