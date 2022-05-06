@@ -58,6 +58,18 @@ namespace WpfExampleTimur343.DataBase
                 .Property(e => e.TovarNameLvl)
                 .IsUnicode(false);
 
+            modelBuilder.Entity<TovarLevelWinter>()
+                .Property(e => e.TovarLevelWinterName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<TovarLevelAutumn>()
+                .Property(e => e.TovarNameLvlAutumn)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<TovarLevelSpring>()
+                .Property(e => e.TovarLevelSpringName)
+                .IsUnicode(false);
+
             modelBuilder.Entity<Tovars>()
                 .Property(e => e.TovarName)
                 .IsUnicode(false);

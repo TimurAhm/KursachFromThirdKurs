@@ -10,26 +10,20 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 using WpfExampleTimur343.DataBase;
 
-namespace WpfExampleTimur343.Pages
+namespace WpfExampleTimur343
 {
     /// <summary>
-    /// Interaction logic for TovarLevelPage.xaml
+    /// Interaction logic for SptingRaznForm.xaml
     /// </summary>
-    public partial class TovarLevelPage : Page
+    public partial class SptingRaznForm : Window
     {
-        public TovarLevelPage()
+        public SptingRaznForm()
         {
             InitializeComponent();
-            DgvTovarLvl.ItemsSource = EfModel.Init().TovarLevels.ToList();
-        }
-
-        private void btLvlSummerRaznClick(object sender, RoutedEventArgs e)
-        {
-            new SummerRaznForm().ShowDialog();
+            DgvTovarLvlSpring.ItemsSource = EfModel.Init().Tovars.ToList();
         }
     }
 }

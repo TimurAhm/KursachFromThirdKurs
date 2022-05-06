@@ -42,7 +42,7 @@ namespace WpfExampleTimur343.Pages
             mapControl.Zoom = 13;     //Текущий зум
             mapControl.ShowCenter = false; //Не показывать центральный крест
             mapControl.DragButton = MouseButton.Left; //Щелкните левой кнопкой мыши, чтобы перетащить карту
-            mapControl.Position = new PointLatLng(54.091697, 52.540152); //Центральное расположение карты.
+            mapControl.Position = new PointLatLng(54.091697, 52.540152); //Центральное расположение карты. 
 
             mapControl.MouseLeftButtonDown += new MouseButtonEventHandler(mapControl_MouseLeftButtonDown);
 
@@ -75,8 +75,6 @@ namespace WpfExampleTimur343.Pages
                PointLatLng point = mapControl.FromLocalToLatLng((int)clickPoint.X, (int)clickPoint.Y);
                GMapMarker marker = new GMapMarker(point);
                mapControl.Markers.Add(marker);
-            
-               
             if(Mouse.RightButton == MouseButtonState.Pressed)
                 marker.Shape = new Ellipse
                 {

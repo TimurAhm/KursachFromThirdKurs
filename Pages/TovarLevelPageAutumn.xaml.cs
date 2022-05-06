@@ -26,5 +26,10 @@ namespace WpfExampleTimur343.Pages
             InitializeComponent();
             DgvTovarLvlAutumn.ItemsSource = EfModel.Init().TovarLevelAutumns.ToList();
         }
+
+        private void btLvlAutumnRaznClick(object sender, RoutedEventArgs e)
+        {
+            new AutumnRaznForm().ShowDialog();
+        }
     }
 }

@@ -10,26 +10,24 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 using WpfExampleTimur343.DataBase;
 
-namespace WpfExampleTimur343.Pages
+namespace WpfExampleTimur343
 {
     /// <summary>
-    /// Interaction logic for TovarLevelPage.xaml
+    /// Interaction logic for AutumnRaznForm.xaml
     /// </summary>
-    public partial class TovarLevelPage : Page
+    public partial class AutumnRaznForm : Window
     {
-        public TovarLevelPage()
+        public AutumnRaznForm()
         {
             InitializeComponent();
-            DgvTovarLvl.ItemsSource = EfModel.Init().TovarLevels.ToList();
+            DgvTovarLvlAutumn.ItemsSource = EfModel.Init().Tovars.ToList();
         }
 
-        private void btLvlSummerRaznClick(object sender, RoutedEventArgs e)
+        private void btLvlAutumnRaznClick(object sender, RoutedEventArgs e)
         {
-            new SummerRaznForm().ShowDialog();
         }
     }
 }

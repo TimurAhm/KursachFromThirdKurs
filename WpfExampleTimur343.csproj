@@ -137,6 +137,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AutumnRaznForm.xaml.cs">
+      <DependentUpon>AutumnRaznForm.xaml</DependentUpon>
+    </Compile>
     <Compile Include="DataBase\AuthClass.cs" />
     <Compile Include="DataBase\Entity\TovarLevelAutumn.cs" />
     <Compile Include="DataBase\Entity\TovarLevelSpring.cs" />
@@ -173,10 +176,23 @@
     <Compile Include="Pages\UserPage.xaml.cs">
       <DependentUpon>UserPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SptingRaznForm.xaml.cs">
+      <DependentUpon>SptingRaznForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SummerRaznForm.xaml.cs">
+      <DependentUpon>SummerRaznForm.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WelcomeWindow.xaml.cs">
       <DependentUpon>WelcomeWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WinterRaznForm.xaml.cs">
+      <DependentUpon>WinterRaznForm.xaml</DependentUpon>
+    </Compile>
     <Page Include="AuthorizationWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AutumnRaznForm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -254,7 +270,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="SptingRaznForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SummerRaznForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="WelcomeWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WinterRaznForm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

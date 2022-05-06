@@ -25,6 +25,12 @@ namespace WpfExampleTimur343.Pages
         {
             InitializeComponent();
             DgvTovarLvlWinter.ItemsSource = EfModel.Init().TovarLevelWinters.ToList();
+
+        }
+
+        private void btLvlWinterRaznClick(object sender, RoutedEventArgs e)
+        {
+            new WinterRaznForm().ShowDialog();
         }
     }
 }

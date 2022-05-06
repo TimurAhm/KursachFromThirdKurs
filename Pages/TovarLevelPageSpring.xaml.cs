@@ -26,5 +26,10 @@ namespace WpfExampleTimur343.Pages
             InitializeComponent();
             DgvTovarLvlSpting.ItemsSource = EfModel.Init().TovarLevelSprings.ToList();
         }
+
+        private void btLvlSpringRaznClick(object sender, RoutedEventArgs e)
+        {
+            new SptingRaznForm().ShowDialog();
+        }
     }
 }
