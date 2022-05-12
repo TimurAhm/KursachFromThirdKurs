@@ -123,5 +123,11 @@ namespace WpfExampleTimur343.Pages
         {
             mapControl.Position = new PointLatLng(54.525936, 52.822807); //Центральное расположение карты.
         }
+
+        private void btSelectSkladClick(object sender, RoutedEventArgs e)
+        {
+            AuthorizationWindow authorizationWindow = new AuthorizationWindow();
+            authorizationWindow.ShowDialog();
+        }
     }
 }

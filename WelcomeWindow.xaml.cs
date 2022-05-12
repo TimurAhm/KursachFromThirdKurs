@@ -26,9 +26,10 @@ namespace WpfExampleTimur343
 
         private void btWelcomeClick(object sender, RoutedEventArgs e)
         {
-            AuthorizationWindow authorizationWindow= new AuthorizationWindow();
+           // AuthorizationWindow authorizationWindow= new AuthorizationWindow();
+            SkladSelectWindow skladSelectWindow = new SkladSelectWindow();
             Hide();
-            authorizationWindow.ShowDialog();
+            skladSelectWindow.ShowDialog();
             Show();
         }
 

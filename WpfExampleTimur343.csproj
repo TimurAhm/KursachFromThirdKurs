@@ -199,6 +199,9 @@
     <Compile Include="Pages\UserPage.xaml.cs">
       <DependentUpon>UserPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SkladSelectWindow.xaml.cs">
+      <DependentUpon>SkladSelectWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SptingRaznForm.xaml.cs">
       <DependentUpon>SptingRaznForm.xaml</DependentUpon>
     </Compile>
@@ -290,6 +293,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\UserPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SkladSelectWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
