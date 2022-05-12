@@ -8,12 +8,19 @@
       xmlns:src = "clr-namespace:WpfExampleTimur343.DataBase"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      
       Title="MapPage">
 
     <Grid Background="AliceBlue">
-        <GroupBox Name="mapgroup" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <GroupBox Grid.Column="0" Name="mapgroup" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch">
             <src:MapControl x:Name="mapControl" Zoom="13" MaxZoom="24" MinZoom="1" MouseDown="mapControl_MouseLeftButtonDown"/>
         </GroupBox>
+        <StackPanel Grid.Column="1">
+            <Button  Height="20" Margin="10" Content="Склад номер 1(Северное)" Click="MapSevernoeClick"/>
+            <Button  Height="20" Margin="10" Content="Склад номер 2(Бугульма)" Click="MapBugulmaClick"/>
+        </StackPanel>
     </Grid>
 </Page>

@@ -54,8 +54,12 @@ namespace WpfExampleTimur343.Pages
             pointlatlang.Add(new PointLatLng(54.091977069290365, 52.54180637059018));
             pointlatlang.Add(new PointLatLng(54.09150042409676, 52.54092392385772));
 
+            //54.525936, 52.822807
             //Declare polygon in gmap
             GMapPolygon polygon = new GMapPolygon(pointlatlang);
+
+
+            
 
             Path path = new Path();
             path.Fill = new SolidColorBrush(Colors.Red) { Opacity = 0.5 };
@@ -64,9 +68,27 @@ namespace WpfExampleTimur343.Pages
             path.Effect = null;
 
             polygon.Shape = path;
-
+            
             //To add polygon in gmap
             mapControl.Markers.Add(polygon);
+
+            List<PointLatLng> pointlatlangB = new List<PointLatLng>();
+            pointlatlangB.Add(new PointLatLng(54.525974, 52.822354));
+            pointlatlangB.Add(new PointLatLng(54.525789, 52.822547));
+            pointlatlangB.Add(new PointLatLng(54.525851, 52.823019));
+            pointlatlangB.Add(new PointLatLng(54.526056, 52.822963));
+
+            GMapPolygon polygonB = new GMapPolygon(pointlatlangB);
+
+            Path pathB = new Path();
+            pathB.Fill = new SolidColorBrush(Colors.Blue) { Opacity = 0.5 };
+            pathB.StrokeThickness = 1.5;
+            pathB.Stroke = Brushes.DarkBlue;
+            pathB.Effect = null;
+
+            polygonB.Shape = pathB;
+
+            mapControl.Markers.Add(polygonB);
         }
 
         void mapControl_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -90,6 +112,16 @@ namespace WpfExampleTimur343.Pages
         private void mapView_Loaded(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void MapSevernoeClick(object sender, RoutedEventArgs e)
+        {
+            mapControl.Position = new PointLatLng(54.091697, 52.540152); //Центральное расположение карты.
+        }
+
+        private void MapBugulmaClick(object sender, RoutedEventArgs e)
+        {
+            mapControl.Position = new PointLatLng(54.525936, 52.822807); //Центральное расположение карты.
         }
     }
 }
