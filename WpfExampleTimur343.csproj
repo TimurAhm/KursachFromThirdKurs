@@ -169,6 +169,9 @@
     <Compile Include="DataBase\Entity\TovarLevelWinter.cs" />
     <Compile Include="DataBase\Entity\UserPriorityType.cs" />
     <Compile Include="DataBase\MapControl.cs" />
+    <Compile Include="MainBugulmaWindow.xaml.cs">
+      <DependentUpon>MainBugulmaWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\IngridientAddPage.xaml.cs">
       <DependentUpon>IngridientAddPage.xaml</DependentUpon>
     </Compile>
@@ -219,6 +222,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="AutumnRaznForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainBugulmaWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
