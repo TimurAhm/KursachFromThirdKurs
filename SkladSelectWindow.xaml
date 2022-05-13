@@ -8,6 +8,5 @@
         Title="SkladSelectWindow" Height="450" Width="800" WindowState="Maximized">
     <Grid>
         <Frame Name="PageSwitcher" NavigationUIVisibility="Hidden"/>
-        
     </Grid>
 </Window>

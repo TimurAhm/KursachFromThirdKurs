@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfExampleTimur343"
         mc:Ignorable="d"
-        Title="MainBugulmaWindow" Height="450" Width="800">
+        Title="MainBugulmaWindow" Height="450" Width="800" WindowState="Maximized">
     <Window.Background>
             <RadialGradientBrush RadiusX="4">
                 <GradientStop Color="#FF76402D" Offset="1"/>

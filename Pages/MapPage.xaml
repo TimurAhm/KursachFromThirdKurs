@@ -18,8 +18,7 @@
         <GroupBox Grid.Column="0" Name="mapgroup" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch">
             <src:MapControl x:Name="mapControl" Zoom="13" MaxZoom="24" MinZoom="1" MouseDown="mapControl_MouseLeftButtonDown"/>
         </GroupBox>
-            <Button Grid.Column="0" Content="Выбрать" Click="btSelectSkladClick" VerticalAlignment="Bottom" Height="30"/>
-            <StackPanel Grid.Column="1">
+        <StackPanel Grid.Column="1">
             <Button  Height="20" Margin="10" Content="Склад номер 1(Северное)" Click="MapSevernoeClick"/>
             <Button  Height="20" Margin="10" Content="Склад номер 2(Бугульма)" Click="MapBugulmaClick"/>
         </StackPanel>

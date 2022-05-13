@@ -160,6 +160,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AuthWin.xaml.cs">
+      <DependentUpon>AuthWin.xaml</DependentUpon>
+    </Compile>
     <Compile Include="AutumnRaznForm.xaml.cs">
       <DependentUpon>AutumnRaznForm.xaml</DependentUpon>
     </Compile>
@@ -169,6 +172,7 @@
     <Compile Include="DataBase\Entity\TovarLevelWinter.cs" />
     <Compile Include="DataBase\Entity\UserPriorityType.cs" />
     <Compile Include="DataBase\MapControl.cs" />
+    <Compile Include="DataBase\NomerMemory.cs" />
     <Compile Include="MainBugulmaWindow.xaml.cs">
       <DependentUpon>MainBugulmaWindow.xaml</DependentUpon>
     </Compile>
@@ -218,6 +222,10 @@
       <DependentUpon>WinterRaznForm.xaml</DependentUpon>
     </Compile>
     <Page Include="AuthorizationWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AuthWin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

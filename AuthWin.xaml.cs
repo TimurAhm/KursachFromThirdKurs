@@ -9,6 +9,7 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using WpfExampleTimur343.DataBase;
 using WpfExampleTimur343.Pages;
@@ -16,12 +17,11 @@ using WpfExampleTimur343.Pages;
 namespace WpfExampleTimur343
 {
     /// <summary>
-    /// Interaction logic for AuthorizationWindow.xaml
+    /// Interaction logic for AuthWin.xaml
     /// </summary>
-    public partial class AuthorizationWindow : Window
-    { 
-
-        public AuthorizationWindow()
+    public partial class AuthWin : Window
+    {
+        public AuthWin()
         {
             InitializeComponent();
         }
@@ -30,25 +30,24 @@ namespace WpfExampleTimur343
         {
             MapPage map = new MapPage();
             Mouse.OverrideCursor = Cursors.Wait;
-         //   if (map.tbskld.Text == Convert.ToString(0))
+            //   if (map.tbskld.Text == Convert.ToString(0))
+            
             
                 if (EfModel.Init().Users.Any(u => u.UserLogin == tbLogin.Text && u.UserPass == tbPass.Text))
                 {
                     if (AuthClass.Auth(tbLogin.Text, tbPass.Text))
                     {
-                        MainWindow mainWindow = new MainWindow();
+                        MainBugulmaWindow mainBugulmaWindow = new MainBugulmaWindow();
+                        //  MainWindow mainWindow = new MainWindow();
                         Mouse.OverrideCursor = null;
                         MessageBox.Show("Добро пожаловать " + AuthClass.users.UserName + "!");
                         Hide();
-                        mainWindow.ShowDialog();
+                        mainBugulmaWindow.ShowDialog();
                         Close();
                     }
                 }
             
-          //  if (map.tbskld.Text == Convert.ToString(1))
-            
         }
-
         private void Close(object sender, RoutedEventArgs e)
         {
             Close();

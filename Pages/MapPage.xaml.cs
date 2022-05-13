@@ -15,6 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfExampleTimur343.DataBase;
 
 namespace WpfExampleTimur343.Pages
 {
@@ -23,9 +24,11 @@ namespace WpfExampleTimur343.Pages
     /// </summary>
     public partial class MapPage : Page
     {
+        public int sklad;
         public MapPage()
         {
             InitializeComponent();
+            
             try
             {
                 System.Net.IPHostEntry e = System.Net.Dns.GetHostEntry("ditu.google.cn");
@@ -117,17 +120,20 @@ namespace WpfExampleTimur343.Pages
         private void MapSevernoeClick(object sender, RoutedEventArgs e)
         {
             mapControl.Position = new PointLatLng(54.091697, 52.540152); //Центральное расположение карты.
+            AuthorizationWindow authorizationWindow = new AuthorizationWindow();
+            authorizationWindow.ShowDialog();
         }
 
         private void MapBugulmaClick(object sender, RoutedEventArgs e)
         {
             mapControl.Position = new PointLatLng(54.525936, 52.822807); //Центральное расположение карты.
+            AuthWin authWin = new AuthWin();
+            authWin.ShowDialog();
         }
 
         private void btSelectSkladClick(object sender, RoutedEventArgs e)
         {
-            AuthorizationWindow authorizationWindow = new AuthorizationWindow();
-            authorizationWindow.ShowDialog();
+                
         }
     }
 }
