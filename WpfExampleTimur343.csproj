@@ -160,10 +160,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="AuthWin.xaml.cs">
+    <Compile Include="WinS\AuthWin.xaml.cs">
       <DependentUpon>AuthWin.xaml</DependentUpon>
     </Compile>
-    <Compile Include="AutumnRaznForm.xaml.cs">
+    <Compile Include="WinS\AutumnRaznForm.xaml.cs">
       <DependentUpon>AutumnRaznForm.xaml</DependentUpon>
     </Compile>
     <Compile Include="DataBase\AuthClass.cs" />
@@ -173,7 +173,7 @@
     <Compile Include="DataBase\Entity\UserPriorityType.cs" />
     <Compile Include="DataBase\MapControl.cs" />
     <Compile Include="DataBase\NomerMemory.cs" />
-    <Compile Include="MainBugulmaWindow.xaml.cs">
+    <Compile Include="WinS\MainBugulmaWindow.xaml.cs">
       <DependentUpon>MainBugulmaWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\IngridientAddPage.xaml.cs">
@@ -206,38 +206,38 @@
     <Compile Include="Pages\UserPage.xaml.cs">
       <DependentUpon>UserPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="SkladSelectWindow.xaml.cs">
+    <Compile Include="WinS\SkladSelectWindow.xaml.cs">
       <DependentUpon>SkladSelectWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="SptingRaznForm.xaml.cs">
+    <Compile Include="WinS\SptingRaznForm.xaml.cs">
       <DependentUpon>SptingRaznForm.xaml</DependentUpon>
     </Compile>
-    <Compile Include="SummerRaznForm.xaml.cs">
+    <Compile Include="WinS\SummerRaznForm.xaml.cs">
       <DependentUpon>SummerRaznForm.xaml</DependentUpon>
     </Compile>
-    <Compile Include="WelcomeWindow.xaml.cs">
+    <Compile Include="WinS\WelcomeWindow.xaml.cs">
       <DependentUpon>WelcomeWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="WinterRaznForm.xaml.cs">
+    <Compile Include="WinS\WinterRaznForm.xaml.cs">
       <DependentUpon>WinterRaznForm.xaml</DependentUpon>
     </Compile>
-    <Page Include="AuthorizationWindow.xaml">
+    <Page Include="WinS\AuthorizationWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="AuthWin.xaml">
+    <Page Include="WinS\AuthWin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="AutumnRaznForm.xaml">
+    <Page Include="WinS\AutumnRaznForm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MainBugulmaWindow.xaml">
+    <Page Include="WinS\MainBugulmaWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MainWindow.xaml">
+    <Page Include="WinS\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -245,7 +245,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="AuthorizationWindow.xaml.cs">
+    <Compile Include="WinS\AuthorizationWindow.xaml.cs">
       <DependentUpon>AuthorizationWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Migrations\C__MigrationHistory.cs" />
@@ -255,7 +255,7 @@
     <Compile Include="DataBase\Entity\TovarLevelsSummer.cs" />
     <Compile Include="DataBase\Entity\Tovars.cs" />
     <Compile Include="DataBase\Entity\Users.cs" />
-    <Compile Include="MainWindow.xaml.cs">
+    <Compile Include="WinS\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
@@ -311,23 +311,23 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="SkladSelectWindow.xaml">
+    <Page Include="WinS\SkladSelectWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="SptingRaznForm.xaml">
+    <Page Include="WinS\SptingRaznForm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="SummerRaznForm.xaml">
+    <Page Include="WinS\SummerRaznForm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="WelcomeWindow.xaml">
+    <Page Include="WinS\WelcomeWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="WinterRaznForm.xaml">
+    <Page Include="WinS\WinterRaznForm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

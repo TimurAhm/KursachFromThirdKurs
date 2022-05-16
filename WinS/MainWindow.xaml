@@ -28,9 +28,9 @@
         <TextBlock Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="60" Foreground="AntiqueWhite" FontStyle="Oblique" Text="Склад №3 г.Северное"/>
 
         <StackPanel Grid.Column="1" Grid.Row="1" Orientation="Vertical" >
-            <Button  Content="Товары" Click="PageOneClick" Height="45" HorizontalAlignment="Right" Width="370"/>
+            <Button x:Name="btTovars" Content="Товары" Click="PageOneClick" Height="45" HorizontalAlignment="Right" Width="370"/>
             <Label Height="30"/>
-            <Button  Content="Ингредиенты" Click="IngridientsPageClick" Height="45" HorizontalAlignment="Right" Width="370"/>
+            <Button x:Name="btIngridients" Content="Ингредиенты" Click="IngridientsPageClick" Height="45" HorizontalAlignment="Right" Width="370"/>
             <Label Height="30"/>
             <Label Height="30" Content="                             Уровень товаров:"/>
             <ComboBox Name="cbTovarLvlSeason" Text="Сезон уровня товаров" Height="45" Width="370" HorizontalAlignment="Right">
