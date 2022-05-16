@@ -9,8 +9,14 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="MapPage">
+    <Page.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="Black" Offset="0"/>
+            <GradientStop Color="#FF831D1D" Offset="1"/>
+        </LinearGradientBrush>
+    </Page.Background>
 
-    <Grid Background="AliceBlue">
+    <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="4*"/>
             <ColumnDefinition/>
@@ -19,8 +25,8 @@
             <src:MapControl x:Name="mapControl" Zoom="13" MaxZoom="24" MinZoom="1" MouseDown="mapControl_MouseLeftButtonDown"/>
         </GroupBox>
         <StackPanel Grid.Column="1" VerticalAlignment="Top">
-                <Button  Height="20" Margin="10" Content="Склад номер 1(Северное)" Click="MapSevernoeClick" MouseDoubleClick="MapSevernoeDoubleClick"/>
-                <Button  Height="20" Margin="10" Content="Склад номер 2(Бугульма)" Click="MapBugulmaClick" MouseDoubleClick="MapBugulmaDoubleClick"/>
+                <Button  Height="40" Margin="10" Content="Склад номер 1(Северное)" Click="MapSevernoeClick" MouseDoubleClick="MapSevernoeDoubleClick"/>
+                <Button  Height="40" Margin="10" Content="Склад номер 2(Бугульма)" Click="MapBugulmaClick" MouseDoubleClick="MapBugulmaDoubleClick"/>
             </StackPanel>
         <StackPanel Grid.Column="1" VerticalAlignment="Bottom">
             <Label Foreground="Gray" HorizontalAlignment="Right" VerticalAlignment="Bottom" Content="Кликни лкм по кнопке, чтобы показать местоположение*" ></Label>
