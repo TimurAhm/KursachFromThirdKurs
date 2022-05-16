@@ -46,6 +46,22 @@ namespace WpfExampleTimur343.Pages
 
         private void btSaveTovarClick(object sender, RoutedEventArgs e)
         {
+            StringBuilder errorBuilder = new StringBuilder();
+
+            if (tbTovarName.Text.Length < 1)
+                errorBuilder.AppendLine("Заполните название товара");
+            if (tbTovarCount.Text.Length < 1)
+                errorBuilder.AppendLine("Заполните количство товара");
+            if (tbTovarCreateDate.Text.Length < 1)
+                errorBuilder.AppendLine("Заполните дату производства товара");
+            if (tbTovarExpDate.Text.Length < 1)
+                errorBuilder.AppendLine("Заполните дату истечения срока годности товара");
+            if (errorBuilder.Length > 0)
+            {
+                MessageBox.Show(errorBuilder.ToString());
+                return;
+            }
+
             if (tovars.TovarId == 0)
                 EfModel.Init().Tovars.Add(tovars);
             EfModel.Init().SaveChanges();

@@ -47,6 +47,20 @@ namespace WpfExampleTimur343.Pages
 
         private void btSaveUserClick(object sender, RoutedEventArgs e)
         {
+            StringBuilder errorBuilder = new StringBuilder();
+
+            if (tbUserName.Text.Length < 1)
+                errorBuilder.AppendLine("Заполните имя пользователя");
+            if (tbUserLogin.Text.Length < 1)
+                errorBuilder.AppendLine("Заполните логин пользователя");
+            if (tbUserPass.Text.Length < 1)
+                errorBuilder.AppendLine("Заполните пароль пользователя");
+            if (errorBuilder.Length > 0)
+            {
+                MessageBox.Show(errorBuilder.ToString());
+                return;
+            }
+
             if (users.UserId == 0)
                 EfModel.Init().Users.Add(users);
             EfModel.Init().SaveChanges();
@@ -57,7 +71,7 @@ namespace WpfExampleTimur343.Pages
         {
             Random rand = new Random();
             int p = rand.Next(7, 50);
-            tbPass.Clear();
+            tbUserPass.Clear();
                 string iPass = "";
                 string[] arr = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "B", "C", "D", "F", "G", "H", "J", "K", "L", "M", "N", "P", "Q", "R", "S", "T", "V", "W", "X", "Z", "b", "c", "d", "f", "g", "h", "j", "k", "m", "n", "p", "q", "r", "s", "t", "v", "w", "x", "z", "A", "E", "U", "Y", "a", "e", "i", "o", "u", "y" };
                 Random rnd = new Random();
@@ -65,7 +79,7 @@ namespace WpfExampleTimur343.Pages
                 {
                     iPass = iPass + arr[rnd.Next(0, 57)];
                 }
-            tbPass.Text = iPass;
+            tbUserPass.Text = iPass;
         }
     }
 }

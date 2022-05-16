@@ -45,10 +45,28 @@ namespace WpfExampleTimur343.Pages
 
         private void btSaveIngridientClick(object sender, RoutedEventArgs e)
         {
-            if (ingridients.IngridientId == 0)
-                EfModel.Init().Ingridients.Add(ingridients);
-            EfModel.Init().SaveChanges();
-            NavigationService.Navigate(new IngridientPage());
+            StringBuilder errorBuilder = new StringBuilder();
+
+            if (tbIngName.Text.Length < 1)
+                errorBuilder.AppendLine("Заполните название ингридиента");
+            if (tbIngCount.Text.Length < 1)
+                errorBuilder.AppendLine("Заполните количство ингридиентов");
+            if (tbIngCreateDate.Text.Length < 1)
+                errorBuilder.AppendLine("Заполните дату производства ингридиента");
+            if (tbIngExpDate.Text.Length < 1)
+                errorBuilder.AppendLine("Заполните дату истечения срока годности ингридиента");
+            if (errorBuilder.Length > 0)
+            {
+                MessageBox.Show(errorBuilder.ToString());
+                return;
+            }
+
+
+                if (ingridients.IngridientId == 0)
+                    EfModel.Init().Ingridients.Add(ingridients);
+                EfModel.Init().SaveChanges();
+                NavigationService.Navigate(new IngridientPage());
+            
         }
 
       //  private void btDeleteIngridientClick(object sender, RoutedEventArgs e)

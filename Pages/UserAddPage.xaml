@@ -17,11 +17,11 @@
             <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Width="600">
                 <Image Source="{Binding UsersPicture, TargetNullValue={StaticResource Picture}}" Height="200" MouseDown="ImageClick"/>
                 <TextBlock Text="Имя"/>
-                <TextBox Text="{Binding UserName}"/>
+                <TextBox Text="{Binding UserName}" x:Name="tbUserName"/>
                 <TextBlock Text="Логин"/>
-                <TextBox Text="{Binding UserLogin}"/>
+                <TextBox Text="{Binding UserLogin}" x:Name="tbUserLogin"/>
                 <TextBlock Text="Пароль"/>
-                <TextBox Name="tbPass" Text="{Binding UserPass}"/>
+                <TextBox  Text="{Binding UserPass}" x:Name="tbUserPass"/>
                 <Label Height="10"/>
                 <Button Name="btRandomPassGenerator" Content="Сгенерировать случайный пароль" Click="btRandomPassGeneratorClick" Height="20" Width="500" HorizontalAlignment="Left"/>
                 <Label Height="10"/>

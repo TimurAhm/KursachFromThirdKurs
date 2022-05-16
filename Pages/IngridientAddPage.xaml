@@ -17,13 +17,13 @@
             <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Width="600">
                 <Image Source="{Binding IngridientPicture, TargetNullValue={StaticResource Picture}}" Height="200" MouseDown="ImageClick"/>
                 <TextBlock Text="Имя"/>
-                <TextBox Text="{Binding IngridientName}"/>
+                <TextBox Text="{Binding IngridientName}" x:Name="tbIngName"/>
                 <TextBlock Text="Количество"/>
-                <TextBox Text="{Binding IngridientCount}"/>
+                <TextBox Text="{Binding IngridientCount}" x:Name="tbIngCount"/>
                 <TextBlock Text="Дата создания"/>
-                <TextBox Text="{Binding IngridientCreateDate}"/>
+                <TextBox Text="{Binding IngridientCreateDate}" x:Name="tbIngCreateDate"/>
                 <TextBlock Text="Дата выхода срока годности"/>
-                <TextBox Text="{Binding IngridientExpirationDate}"/>
+                <TextBox Text="{Binding IngridientExpirationDate}" x:Name="tbIngExpDate"/>
      
                 <!-- <Label>
                     <Label.Content>

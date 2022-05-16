@@ -17,13 +17,13 @@
             <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Width="600">
                 <Image Source="{Binding TovarPicture, TargetNullValue={StaticResource Picture}}" Height="200" MouseDown="ImageClick"/>
                 <TextBlock Text="Имя"/>
-                <TextBox Text="{Binding TovarName}"/>
+                <TextBox Text="{Binding TovarName}" x:Name="tbTovarName"/>
                 <TextBlock Text="Количество"/>
-                <TextBox Text="{Binding TovarCount}"/>
+                <TextBox Text="{Binding TovarCount}" x:Name="tbTovarCount"/>
                 <TextBlock Text="Дата создания"/>
-                <TextBox Text="{Binding TovarCreateDate}"/>
+                <TextBox Text="{Binding TovarCreateDate}" x:Name="tbTovarCreateDate"/>
                 <TextBlock Text="Дата выхода срока годности"/>
-                <TextBox Text="{Binding TovarExpirationDate}"/>
+                <TextBox Text="{Binding TovarExpirationDate}" x:Name="tbTovarExpDate"/>
                 <TextBlock Text="Цена товара"/>
                 <TextBox Text="{Binding TovarPrice}"/>
                 <!-- <Label>
