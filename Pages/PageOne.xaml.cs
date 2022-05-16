@@ -68,7 +68,8 @@ namespace WpfExampleTimur343.Pages
                 ImageBrush textImageBrush = new ImageBrush();
                 textImageBrush.ImageSource =
                     new BitmapImage(
-                        new Uri(@"C:\Users\student\Source\Repos\KurschTimurWPF\Resources\поиск.png", UriKind.Relative)
+                        new Uri(@"C:\Users\User\source\repos\KurschTimurWPF4\Resources\поиск.png", UriKind.Relative)
+                    //C:\Users\student\Source\Repos\KurschTimurWPF\Resources\поиск.png
                     );
                 textImageBrush.AlignmentX = AlignmentX.Left;
                 textImageBrush.Stretch = Stretch.None;
@@ -80,7 +81,8 @@ namespace WpfExampleTimur343.Pages
                 tbSearchTovar.Background = null;
                 ImageBrush textimageBrush = new ImageBrush();
                 textimageBrush.ImageSource = new BitmapImage(
-                    new Uri(@"C:\Users\student\Source\Repos\KurschTimurWPF\Resources\поискПустой.png", UriKind.Relative));
+                    new Uri(@"C:\Users\User\source\repos\KurschTimurWPF4\Resources\поискПустой.png", UriKind.Relative));
+                //C:\Users\student\Source\Repos\KurschTimurWPF\Resources\поискПустой.png
                 textimageBrush.AlignmentX = AlignmentX.Left;
                 textimageBrush.Stretch = Stretch.None;
                 tbSearchTovar.Background= textimageBrush;

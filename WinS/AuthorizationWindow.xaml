@@ -28,16 +28,16 @@
                 </TextBox.RenderTransform>
             </TextBox>
             <Label Content="Пароль:" Foreground="White"/>
-            <TextBox Width="400" Margin="10" RenderTransformOrigin="0.5,0.5" Name="tbPass">
-                <TextBox.RenderTransform>
+            <PasswordBox Width="400" Margin="10" RenderTransformOrigin="0.5,0.5" Name="tbPass" >
+                <PasswordBox.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
                         <SkewTransform AngleX="22.35"/>
                         <RotateTransform/>
                         <TranslateTransform X="3.692"/>
                     </TransformGroup>
-                </TextBox.RenderTransform>
-            </TextBox>
+                </PasswordBox.RenderTransform>
+            </PasswordBox>
             <Button Width="300" Height="20" Margin="10" Content="Войти" Click="btLoginClick"/>
             <Button Width="200" Height="20" Margin="10" Content="Выйти" Click="Close"/>
         </StackPanel>

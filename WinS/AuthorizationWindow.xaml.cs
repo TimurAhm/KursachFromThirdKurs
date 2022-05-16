@@ -32,9 +32,9 @@ namespace WpfExampleTimur343
             Mouse.OverrideCursor = Cursors.Wait;
          //   if (map.tbskld.Text == Convert.ToString(0))
             
-                if (EfModel.Init().Users.Any(u => u.UserLogin == tbLogin.Text && u.UserPass == tbPass.Text))
+                if (EfModel.Init().Users.Any(u => u.UserLogin == tbLogin.Text && u.UserPass == tbPass.Password))
                 {
-                    if (AuthClass.Auth(tbLogin.Text, tbPass.Text))
+                    if (AuthClass.Auth(tbLogin.Text, tbPass.Password))
                     {
                         MainWindow mainWindow = new MainWindow();
                         Mouse.OverrideCursor = null;

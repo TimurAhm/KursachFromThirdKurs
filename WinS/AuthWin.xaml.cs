@@ -33,9 +33,9 @@ namespace WpfExampleTimur343
             //   if (map.tbskld.Text == Convert.ToString(0))
             
             
-                if (EfModel.Init().Users.Any(u => u.UserLogin == tbLogin.Text && u.UserPass == tbPass.Text))
+                if (EfModel.Init().Users.Any(u => u.UserLogin == tbLogin.Text && u.UserPass == tbPass.Password))
                 {
-                    if (AuthClass.Auth(tbLogin.Text, tbPass.Text))
+                    if (AuthClass.Auth(tbLogin.Text, tbPass.Password))
                     {
                         MainBugulmaWindow mainBugulmaWindow = new MainBugulmaWindow();
                         //  MainWindow mainWindow = new MainWindow();

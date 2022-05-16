@@ -25,7 +25,7 @@
                 <TextBlock Text="Дата выхода срока годности (месяц/день/год)"/>
                 <TextBox Text="{Binding TovarExpirationDate}" x:Name="tbTovarExpDate"/>
                 <TextBlock Text="Цена товара"/>
-                <TextBox Text="{Binding TovarPrice}"/>
+                <TextBox Text="{Binding TovarPrice}" x:Name="tbTovarPrice"/>
                 <!-- <Label>
                     <Label.Content>
                         <StackPanel Orientation="Horizontal">

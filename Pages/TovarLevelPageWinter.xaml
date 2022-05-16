@@ -21,6 +21,6 @@
                 <DataGridTextColumn Header="Количество" Width="*" Binding="{Binding TovarLevelWinterCount}"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Button VerticalAlignment="Bottom" Click="btLvlWinterRaznClick" Content="Расчитать разницу"/>
+        <Button VerticalAlignment="Bottom" Click="btLvlWinterRaznClick" Content="Расчитать разницу (показать кол-во товаров на данный момент)"/>
     </Grid>
 </Page>

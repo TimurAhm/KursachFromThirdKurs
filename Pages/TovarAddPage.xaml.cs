@@ -48,6 +48,47 @@ namespace WpfExampleTimur343.Pages
         {
             StringBuilder errorBuilder = new StringBuilder();
 
+            try
+            {
+                Convert.ToString(tbTovarName.Text);
+            }
+            catch (FormatException)
+            {
+                errorBuilder.AppendLine("В названии товара, введено не название!");
+            }
+            try
+            {
+                Convert.ToInt32(tbTovarCount.Text);
+            }
+            catch (FormatException)
+            {
+                errorBuilder.AppendLine("В количестве товара, введено не количество!");
+            }
+            try
+            {
+                Convert.ToDateTime(tbTovarCreateDate.Text);
+            }
+            catch (FormatException)
+            {
+                errorBuilder.AppendLine("В дате произведения товара, введена не дата!");
+            }
+            try
+            {
+                Convert.ToDateTime(tbTovarExpDate.Text);
+            }
+            catch (FormatException)
+            {
+                errorBuilder.AppendLine("В дате истечения срока годности товара, введена не дата!");
+            }
+            try
+            {
+                Convert.ToDecimal(tbTovarPrice.Text);
+            }
+            catch (FormatException)
+            {
+                errorBuilder.AppendLine("В цене товара, введена не цена!");
+            }
+
             if (tbTovarName.Text.Length < 1)
                 errorBuilder.AppendLine("Заполните название товара");
             if (tbTovarCount.Text.Length < 1)

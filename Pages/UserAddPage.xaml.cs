@@ -49,6 +49,31 @@ namespace WpfExampleTimur343.Pages
         {
             StringBuilder errorBuilder = new StringBuilder();
 
+            try
+            {
+                Convert.ToString(tbUserName.Text);
+            }
+            catch (FormatException)
+            {
+                errorBuilder.AppendLine("В имени, введено не имя!");
+            }
+            try
+            {
+                Convert.ToString(tbUserLogin.Text);
+            }
+            catch (FormatException)
+            {
+                errorBuilder.AppendLine("В логине, введен не логин!");
+            }
+            try
+            {
+                Convert.ToString(tbUserPass.Text);
+            }
+            catch (FormatException)
+            {
+                errorBuilder.AppendLine("В пароле, введен не пароль!");
+            }
+
             if (tbUserName.Text.Length < 1)
                 errorBuilder.AppendLine("Заполните имя пользователя");
             if (tbUserLogin.Text.Length < 1)
