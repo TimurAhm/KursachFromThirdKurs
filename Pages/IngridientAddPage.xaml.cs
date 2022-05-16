@@ -45,7 +45,42 @@ namespace WpfExampleTimur343.Pages
 
         private void btSaveIngridientClick(object sender, RoutedEventArgs e)
         {
+            
+
             StringBuilder errorBuilder = new StringBuilder();
+
+            try
+            {
+                Convert.ToString(tbIngName.Text);
+            }
+            catch(FormatException)
+            {
+                errorBuilder.AppendLine("В названии ингридиента, введено не название!");
+            }
+            try
+            {
+                Convert.ToInt32(tbIngCount.Text);
+            }
+            catch (FormatException)
+            {
+                errorBuilder.AppendLine("В количество ингридиентов, введено не количество!");
+            }
+            try
+            {
+                Convert.ToDateTime(tbIngCreateDate.Text);
+            }
+            catch (FormatException)
+            {
+                errorBuilder.AppendLine("В дате производства ингридиента, введена не дата!");
+            }
+            try
+            {
+                Convert.ToDateTime(tbIngExpDate.Text);
+            }
+            catch (FormatException)
+            {
+                errorBuilder.AppendLine("В дате окончания срока годности ингридиента, введена не дата!");
+            }
 
             if (tbIngName.Text.Length < 1)
                 errorBuilder.AppendLine("Заполните название ингридиента");
