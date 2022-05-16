@@ -25,5 +25,10 @@ namespace WpfExampleTimur343
             InitializeComponent();
             PageSwitcher.Navigate(new MapPage());
         }
+
+        private void btClose(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
     }
 }

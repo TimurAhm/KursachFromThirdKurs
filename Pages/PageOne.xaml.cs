@@ -21,7 +21,6 @@ namespace WpfExampleTimur343.Pages
     /// </summary>
     public partial class PageOne : Page
     {
-        
        // Tovars tovars1;
         private void UpdateData()
         {
@@ -69,7 +68,7 @@ namespace WpfExampleTimur343.Pages
                 ImageBrush textImageBrush = new ImageBrush();
                 textImageBrush.ImageSource =
                     new BitmapImage(
-                        new Uri(@"C:\Users\User\source\repos\KurschTimurWPF2\Resources\поиск.png", UriKind.Relative)
+                        new Uri(@"C:\Users\student\Source\Repos\KurschTimurWPF\Resources\поиск.png", UriKind.Relative)
                     );
                 textImageBrush.AlignmentX = AlignmentX.Left;
                 textImageBrush.Stretch = Stretch.None;
@@ -81,7 +80,7 @@ namespace WpfExampleTimur343.Pages
                 tbSearchTovar.Background = null;
                 ImageBrush textimageBrush = new ImageBrush();
                 textimageBrush.ImageSource = new BitmapImage(
-                    new Uri(@"C:\Users\User\source\repos\KurschTimurWPF2\Resources\поискПустой.png", UriKind.Relative));
+                    new Uri(@"C:\Users\student\Source\Repos\KurschTimurWPF\Resources\поискПустой.png", UriKind.Relative));
                 textimageBrush.AlignmentX = AlignmentX.Left;
                 textimageBrush.Stretch = Stretch.None;
                 tbSearchTovar.Background= textimageBrush;
@@ -99,6 +98,7 @@ namespace WpfExampleTimur343.Pages
             if (AuthClass.users.UserPriority == "user")
             {
                 MessageBox.Show("У вас недостаточно прав");
+                
             }
             else
             {

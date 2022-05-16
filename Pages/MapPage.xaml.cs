@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Timers;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -15,6 +16,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 using WpfExampleTimur343.DataBase;
 
 namespace WpfExampleTimur343.Pages
@@ -117,23 +119,43 @@ namespace WpfExampleTimur343.Pages
 
         }
 
+      private static Timer aTimer;
         private void MapSevernoeClick(object sender, RoutedEventArgs e)
         {
-            mapControl.Position = new PointLatLng(54.091697, 52.540152); //Центральное расположение карты.
+            mapControl.Position = new PointLatLng(54.091697, 52.540152);
+        //    Task.Delay(1000).Wait();
+              /*Timer timer1 = new Timer
+              {
+                  Interval = 5000
+              };
+              timer1.Enabled = true;*/
+            /* DispatcherTimer dispatcherTimer = new DispatcherTimer();
+             dispatcherTimer.Interval = new TimeSpan(0, 0, 3);
+             dispatcherTimer.Start();
+             dispatcherTimer.IsEnabled()*/
+                      
+        }
+
+private void MapBugulmaClick(object sender, RoutedEventArgs e)
+{
+  mapControl.Position = new PointLatLng(54.525936, 52.822807); //Центральное расположение карты.
+}
+
+private void btSelectSkladClick(object sender, RoutedEventArgs e)
+{
+
+}
+
+        private void MapSevernoeDoubleClick(object sender, MouseButtonEventArgs e)
+        {
             AuthorizationWindow authorizationWindow = new AuthorizationWindow();
             authorizationWindow.ShowDialog();
         }
 
-        private void MapBugulmaClick(object sender, RoutedEventArgs e)
+        private void MapBugulmaDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            mapControl.Position = new PointLatLng(54.525936, 52.822807); //Центральное расположение карты.
             AuthWin authWin = new AuthWin();
             authWin.ShowDialog();
-        }
-
-        private void btSelectSkladClick(object sender, RoutedEventArgs e)
-        {
-                
         }
     }
 }

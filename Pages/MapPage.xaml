@@ -18,9 +18,13 @@
         <GroupBox Grid.Column="0" Name="mapgroup" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch">
             <src:MapControl x:Name="mapControl" Zoom="13" MaxZoom="24" MinZoom="1" MouseDown="mapControl_MouseLeftButtonDown"/>
         </GroupBox>
-        <StackPanel Grid.Column="1">
-            <Button  Height="20" Margin="10" Content="Склад номер 1(Северное)" Click="MapSevernoeClick"/>
-            <Button  Height="20" Margin="10" Content="Склад номер 2(Бугульма)" Click="MapBugulmaClick"/>
+        <StackPanel Grid.Column="1" VerticalAlignment="Top">
+                <Button  Height="20" Margin="10" Content="Склад номер 1(Северное)" Click="MapSevernoeClick" MouseDoubleClick="MapSevernoeDoubleClick"/>
+                <Button  Height="20" Margin="10" Content="Склад номер 2(Бугульма)" Click="MapBugulmaClick" MouseDoubleClick="MapBugulmaDoubleClick"/>
+            </StackPanel>
+        <StackPanel Grid.Column="1" VerticalAlignment="Bottom">
+            <Label Foreground="Gray" HorizontalAlignment="Right" VerticalAlignment="Bottom" Content="Кликни лкм по кнопке, чтобы показать местоположение*" ></Label>
+            <Label Foreground="Gray" HorizontalAlignment="Right" VerticalAlignment="Bottom" Content="Кликни лкм по кнопке 2 раза, чтобы перейти к авторизации*"></Label>
         </StackPanel>
     </Grid>
 </Page>

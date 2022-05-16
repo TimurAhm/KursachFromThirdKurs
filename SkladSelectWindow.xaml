@@ -7,6 +7,11 @@
         mc:Ignorable="d"
         Title="SkladSelectWindow" Height="450" Width="800" WindowState="Maximized">
     <Grid>
-        <Frame Name="PageSwitcher" NavigationUIVisibility="Hidden"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="13*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Frame Grid.Row="0" Name="PageSwitcher" NavigationUIVisibility="Hidden"/>
+        <Button Grid.Row="1" Content="Закрыть" Click="btClose"/>
     </Grid>
 </Window>
