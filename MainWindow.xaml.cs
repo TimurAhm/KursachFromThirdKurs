@@ -27,6 +27,7 @@ namespace WpfExampleTimur343
         public MainWindow()
         {
             InitializeComponent();
+            //ссылка https://docs.microsoft.com/en-us/dotnet/api/system.media.systemsounds.beep?redirectedfrom=MSDN&view=dotnet-plat-ext-6.0#System_Media_SystemSounds_Beep
         }
 
         private void FirstFormClick(object sender, RoutedEventArgs e)
