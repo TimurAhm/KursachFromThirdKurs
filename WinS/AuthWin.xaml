@@ -38,8 +38,8 @@
                     </TransformGroup>
                 </PasswordBox.RenderTransform>
             </PasswordBox>
-            <Button Width="300" Height="20" Margin="10" Content="Войти" Click="btLoginClick"/>
-            <Button Width="200" Height="20" Margin="10" Content="Выйти" Click="Close"/>
+            <Button x:Name="btLogin" Width="300" Height="20" Margin="10" Content="Войти" Click="btLoginClick"/>
+            <Button x:Name="btClose" Width="200" Height="20" Margin="10" Content="Выйти" Click="Close"/>
         </StackPanel>
     </Grid>
 </Window>

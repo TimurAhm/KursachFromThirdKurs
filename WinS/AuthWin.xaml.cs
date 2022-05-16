@@ -9,6 +9,7 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using WpfExampleTimur343.DataBase;
@@ -24,6 +25,21 @@ namespace WpfExampleTimur343
         public AuthWin()
         {
             InitializeComponent();
+
+            DoubleAnimation buttonAnimation = new DoubleAnimation();
+            buttonAnimation.From = btLogin.ActualHeight;
+            buttonAnimation.To = 300;
+            buttonAnimation.Duration = TimeSpan.FromSeconds(3);
+            buttonAnimation.RepeatBehavior = new RepeatBehavior(1);
+            btLogin.BeginAnimation(Button.WidthProperty, buttonAnimation);
+
+            DoubleAnimation buttonPassAnimation = new DoubleAnimation();
+            buttonPassAnimation.From = btClose.ActualHeight;
+            buttonPassAnimation.To = 200;
+            buttonPassAnimation.Duration = TimeSpan.FromSeconds(3);
+            buttonPassAnimation.RepeatBehavior = new RepeatBehavior(1);
+            btClose.BeginAnimation(Button.WidthProperty, buttonPassAnimation);
+            //тут немного запутался, тут не кнопка пароля, а кнопка закрытия окна(close)
         }
 
         private void btLoginClick(object sender, RoutedEventArgs e)
