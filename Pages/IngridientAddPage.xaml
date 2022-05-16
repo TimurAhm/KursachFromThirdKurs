@@ -20,9 +20,9 @@
                 <TextBox Text="{Binding IngridientName}" x:Name="tbIngName"/>
                 <TextBlock Text="Количество"/>
                 <TextBox Text="{Binding IngridientCount}" x:Name="tbIngCount"/>
-                <TextBlock Text="Дата создания"/>
+                <TextBlock Text="Дата создания (месяц/день/год)"/>
                 <TextBox Text="{Binding IngridientCreateDate}" x:Name="tbIngCreateDate"/>
-                <TextBlock Text="Дата выхода срока годности"/>
+                <TextBlock Text="Дата выхода срока годности (месяц/день/год)"/>
                 <TextBox Text="{Binding IngridientExpirationDate}" x:Name="tbIngExpDate"/>
      
                 <!-- <Label>

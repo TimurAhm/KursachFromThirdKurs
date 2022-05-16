@@ -20,9 +20,9 @@
                 <TextBox Text="{Binding TovarName}" x:Name="tbTovarName"/>
                 <TextBlock Text="Количество"/>
                 <TextBox Text="{Binding TovarCount}" x:Name="tbTovarCount"/>
-                <TextBlock Text="Дата создания"/>
+                <TextBlock Text="Дата создания (месяц/день/год)"/>
                 <TextBox Text="{Binding TovarCreateDate}" x:Name="tbTovarCreateDate"/>
-                <TextBlock Text="Дата выхода срока годности"/>
+                <TextBlock Text="Дата выхода срока годности (месяц/день/год)"/>
                 <TextBox Text="{Binding TovarExpirationDate}" x:Name="tbTovarExpDate"/>
                 <TextBlock Text="Цена товара"/>
                 <TextBox Text="{Binding TovarPrice}"/>
